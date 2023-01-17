@@ -1,0 +1,257 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/3ab1128600.js" crossorigin="anonymous"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/game.css" />
+
+</head>
+<body>
+    <header id="header">
+    	<h1 id="logo">
+    		<a href="index.html">Какое-то лого</a>
+    	</h1>
+        <nav id="nav_panel">
+       		<ul id="ul_sections">
+       			<li><i class="fa-solid fa-person-chalkboard"></i><a href="lesson.html">Lesson</a></li>
+       			<li><i class="fa-sharp fa-solid fa-book"></i><a href="vocabulary.html">Vocabulary</a></li>
+       			<li><i class="fa-sharp fa-solid fa-list-check"></i><a href="test.html">Test</a></li>
+       			<li><i class="fa-sharp fa-solid fa-scroll"></i><a href="grammar_topic.html">Grammar topic</a></li>
+       			<li><i class="fa-solid fa-utensils"></i><a href="recipes.html">Recipes</a></li>
+       			<li><i class="fa-solid fa-trophy"></i><a href="game.html">Game</a></li>
+       		</ul>
+        </nav>
+
+    </header>
+    <main>
+       
+     <h1> Играем в Wordle </h1>
+<div id="game-board">
+<div id="info-game">
+
+  <div id="countdown" class="countdown">
+    <span class="minutes countdown-time"></span>
+    <span>:</span>
+    <span class="seconds countdown-time"></span>
+  </div>
+  <div id="score">
+    <span id="CurentImage">100</span>
+    <span>/</span>
+  <span id="countLength">200</span></div>
+</div>
+    
+  <div id="game">
+    <img src="grid_0.png" width="500" height="500" id="image">
+     <ul id="wordblock"></ul> 
+  </div>
+<div id="footer-game"></div>
+</div>
+    </main>
+    <footer id="footer">
+    	<span>Create 2023</span>
+    	<span>Какой-то текст</span>
+    	<span>Какой-то текст</span>
+    	<span>Какой-то текст</span>
+    </footer>
+    
+    <script type="text/javascript" src="js/main.js"></script>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+
+
+
+
+<script >
+
+function startGame()
+{
+   word='';
+
+  images = ["img//вилка.webp","img//мозги.webp"];
+  curentImages = 0;
+  deadline = new Date(Date.parse(new Date()) + 120 * 1000);
+  initializeClock("countdown", deadline);
+
+  document.getElementById("CurentImage").innerHTML=curentImages;
+    document.getElementById("countLength").innerHTML=images.length;
+  $(function() {
+  $("#wordblock").sortable();
+  $("#wordblock").disableSelection();
+ document.getElementById("image").src =images[curentImages];
+
+  image = images[curentImages].split("/")[2].split(".")[0];
+  word= image;
+        let d_word = word.split('');
+        shuffle(d_word);
+         lis = [];
+        for (let i = 0; i < d_word.length; i++) {
+          lis.push('<li class="ui-state-default letter-box">' + d_word[i] + '</li>')
+        }
+          $('#wordblock').html(lis.join(''));     
+
+$('#wordblock').mouseup(
+          function() {
+           setTimeout(() => {
+            let r_word = '';  $('#wordblock>li').each(function(e) {   r_word += $(this).text(); }); checkGuess(r_word,word); }, 0);});});
+
+
+
+}
+
+
+
+
+  
+function shuffle(a, b, c, d) {
+  c = a.length;
+  while (c) b = Math.random() * (--c + 1) | 0, d = a[c], a[c] = a[b], a[b] = d
+}
+
+
+
+// проверка введённого слова
+function checkGuess (r_word,word) {
+  // получаем доступ к текущей строке
+    let row = document.getElementById("wordblock");
+    // переменная, где будет наша догадка
+    let guessString = word
+    // делаем из загаданного слова массив символов
+    let rightGuess = r_word.split('');
+    let rightGuessString = r_word;
+    // перебираем все буквы в строке, чтобы подсветить их нужным цветом
+    for (let i = 0; i < word.length; i++) {
+        // убираем текущий цвет, если он был
+        let letterColor = ''
+        // получаем доступ к текущей клетке
+        let box = row.children[i]
+        // и к текущей букве в догадке
+        let letter = guessString[i]
+        
+        // смотрим, на каком месте в исходном слове стоит текущая буква
+        let letterPosition = rightGuess.indexOf(guessString[i])
+        // если такой буквы нет в исходном слове
+        if (letterPosition === -1) {
+            // закрашиваем клетку серым
+            letterColor = 'grey'
+        // иначе, когда мы точно знаем, что буква в слове есть
+        } else {
+            // если позиция в слове совпадает с текущей позицией 
+            if (guessString[i] === rightGuess[i]) {
+                // закрашиваем клетку зелёным
+                letterColor = 'green'
+            } else {
+                // в противном случае закрашиваем жёлтым
+                letterColor = 'grey'
+            }
+            // заменяем обработанный символ на знак решётки, чтобы не использовать его на следующем шаге цикла
+            rightGuess[letterPosition] = "#"
+        }
+
+        // применяем выбранный цвет к фону клетки
+        box.style.backgroundColor = letterColor;
+    }  
+              // если мы угадали
+    if (guessString === rightGuessString) {
+
+
+      curentImages++;
+      document.getElementById("CurentImage").innerHTML=curentImages;
+      if(images.length == curentImages){
+           // выводим сообщение об успехе
+        toastr.success("Вы выиграли!")
+        return;
+
+      }
+      
+        image = images[curentImages].split("/")[2].split(".")[0];
+        document.getElementById("image").src =images[curentImages];
+        word = image;
+        let d_word = word.split('');
+        shuffle(d_word);
+        lis = [];
+        for (let i = 0; i < d_word.length; i++) {
+          lis.push('<li class="ui-state-default letter-box">' + d_word[i] + '</li>')
+        }
+          $('#wordblock').html(lis.join(''));
+ $('#wordblock').mouseup(
+          function() {
+           setTimeout(() => {
+            let r_word = '';  $('#wordblock>li').each(function(e) {   r_word += $(this).text(); }); checkGuess(r_word,word); }, 0);});
+     
+    } 
+}
+
+
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  return {
+    total: t,
+    minutes: minutes,
+    seconds: seconds
+  };
+}
+
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var minutesSpan = clock.querySelector(".minutes");
+  var secondsSpan = clock.querySelector(".seconds");
+
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+      toastr.error("Вы проиграли!")
+      setTimeout(startGame(),5 * 1000);
+    }
+
+    minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+  
+
+  }
+
+
+
+  updateClock();
+  var timeinterval = setInterval(function() {
+    updateClock();
+  if (images.length == curentImages) {
+    clearInterval(timeinterval);
+  }
+}, 1000);
+
+}
+
+
+
+
+
+
+startGame();
+
+
+
+
+</script>
+
+
+</body>
+</html>

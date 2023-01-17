@@ -1,0 +1,101 @@
+/* заголовок страницы */
+h1 {
+ text-align: center;
+}
+#wordblock {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}  
+
+/* стиль для всей доски */
+#game-board {
+  /* делаем выравнивание всех элементов по центру */
+  display: flex;
+  align-items: center;
+  /* добавляем выравнивание по вертикали */
+  flex-direction: column;
+      border-style: double; /* Стиль линии вокруг параграфа */
+    padding: 5px; /* Поля вокруг текста */
+}
+
+
+#wordblock li {
+  margin: 3px 3px 3px 0;
+  padding: 1px;
+  width: 40px;
+  float: left;
+  font-size: 3em;
+  text-align: center;
+  cursor: pointer;
+  font-family: arial;
+  background-color: rgb(0,100,155);
+  color: white;
+
+}
+
+
+/* стиль для клетки */
+.letter-box {
+  /* рисуем границу */
+  border: 2px solid gray;
+  border-radius: 3px;
+  /* добавляем отступы */
+  margin: 2px;
+  /* размер шрифта */
+  font-size: 2.5rem;
+  font-weight: 700;
+  /* высота и ширина клетки */
+  height: 3rem;
+  width: 3rem;
+  /* выравниваем содержимое по центру */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* делаем все буквы большими */
+  text-transform: uppercase;
+}
+
+#score{ 
+  font-family: sans-serif;
+  color: black;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+
+
+
+}
+
+
+.countdown {
+  font-family: sans-serif;
+  color: black;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+
+  position: absolute;
+  top: 12%;
+  left: 1%;
+  margin: 0 0 0 0;
+}
+
+
+.countdown-time {
+  /*padding: 15px;*/
+  /*border-radius: 3px;*/
+  /*background: #00816a;*/
+  display: inline-block;
+}
+
