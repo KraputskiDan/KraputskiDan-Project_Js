@@ -133,300 +133,232 @@ class Result
 const results = 
 [
     new Result("Вам многому нужно научиться", 0),
-    new Result("Вы уже неплохо разбираетесь", 2),
-    new Result("Ваш уровень выше среднего", 4),
-    new Result("Вы в совершенстве знаете тему", 6)
+    new Result("Вы уже неплохо разбираетесь", 4),
+    new Result("Ваш уровень выше среднего", 6),
+    new Result("Вы в совершенстве знаете тему", 13)
 ];
 
 //Массив с вопросами
 const questions1 = 
 [
-    new Question("2 + 2 = ", 
+    new Question("Сколько стоит свежевыжатый сок ? – …", 
     [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
+        new Answer("А. 300 рубль", 0),
+        new Answer("Б. 300 рублей", 1),
+        new Answer("В. 300 рубли", 0),
+        new Answer("Г. 300 рубля", 0)
     ]),
 
-    new Question("2 * 2 = ", 
+    new Question("Сколько нам еще ждать заказ? – Примерно ...", 
     [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
+      new Answer("А. десяти, минута", 0),
+        new Answer("Б. десять, минута", 0),
+        new Answer("В. десяти, минуты", 0),
+        new Answer("Г. десять, минут", 1)
     ]),
 
-    new Question("2 / 2 = ", 
+    new Question("Моя рабочая смена длится 6 … .", 
     [
-        new Answer("0", 0),
-        new Answer("1", 1),
-        new Answer("2", 0),
-        new Answer("3", 0)
+         new Answer("А. час", 0),
+        new Answer("Б. часа", 0),
+        new Answer("В. часов", 1),
+        new Answer("Г. Часа", 0)
     ]),
 
-    new Question("2 - 2 = ", 
+    new Question("Позавчера в ресторане … директора.", 
     [
-        new Answer("0", 1),
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 0)
+      new Answer("А. не быть", 0),
+        new Answer("Б. нет", 0),
+        new Answer("В. не было", 1),
+        new Answer("Г. не будет", 0)
     ]),
 
-    new Question("2 + 2 * 2 = ", 
+    new Question("Сегодня у меня … денег, поэтому обед оплачиваешь ты.", 
     [
-        new Answer("4", 0),
-        new Answer("6", 1),
-        new Answer("8", 0),
-        new Answer("10", 0)
+         new Answer("А. не будет", 0),
+        new Answer("Б. нет", 1),
+        new Answer("В. не было", 0),
+        new Answer("Г. не быть", 0)
     ]),
 
-    new Question("2 + 2 / 2 = ", 
+    new Question("Никто не знает, что … завтра.", 
     [
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 1),
-        new Answer("4", 0)
-    ])
+        new Answer("А. быть", 0),
+        new Answer("Б. не было", 0),
+        new Answer("В. будет", 1),
+        new Answer("Г. есть", 0)
+    ]),
+
+      new Question("Он любит кофе … молока.", 
+    [
+        new Answer("А. для", 0),
+        new Answer("Б. из", 0),
+        new Answer("В. без", 1),
+        new Answer("Г. Кроме", 0)
+    ]),
+       new Question("Иван заказал пиццу … мяса.", 
+    [
+        new Answer("А. после", 0),
+        new Answer("Б. без", 1),
+        new Answer("В. кроме", 0),
+        new Answer("Г. Для", 0)
+    ]),
+        new Question("Положите  … мяса.", 
+    [
+        new Answer("А. после", 0),
+        new Answer("Б. без", 1),
+        new Answer("В. кроме", 0),
+        new Answer("Г. Для", 0)
+    ]),
+         new Question("Вчера наш директор уволил 14 …", 
+    [
+        new Answer("А. человек", 1),
+        new Answer("Б. человека", 0),
+        new Answer("В. людях", 0),
+        new Answer("Г. Люди", 0)
+    ]),
+          new Question("У нас работает 36 …", 
+    [
+        new Answer("А. официанта", 0),
+        new Answer("Б. официант", 0),
+        new Answer("В. официантом", 0),
+        new Answer("Г. официантов", 1)
+    ]),
+
+ new Question("Джон уже был в этом ресторане 5 …", 
+    [
+        new Answer("А. раза", 0),
+        new Answer("Б. разей", 0),
+        new Answer("В. раз", 1),
+        new Answer("Г. разов", 0)
+    ]),
+
+ new Question("У меня нет ни ..., ни  ...", 
+    [
+        new Answer("А. время, деньги", 0),
+        new Answer("Б. времени, денег", 1),
+        new Answer("В. времени, денги ", 0),
+        new Answer("Г. время, деньгов ", 0)
+    ]),
+
 ];
-
-
 
 //Массив с вопросами
 const questions2 = 
 [
-    new Question("2 + 2 = ", 
+    new Question("Сколько стоит свежевыжатый сок ? – …", 
     [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
+        new Answer("А. 300 рубль", 0),
+        new Answer("Б. 300 рублей", 1),
+        new Answer("В. 300 рубли", 0),
+        new Answer("Г. 300 рубля", 0)
     ]),
 
-    new Question("2 * 2 = ", 
+    new Question("Сколько нам еще ждать заказ? – Примерно ...", 
     [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
+      new Answer("А. десяти, минута", 0),
+        new Answer("Б. десять, минута", 0),
+        new Answer("В. десяти, минуты", 0),
+        new Answer("Г. десять, минут", 1)
     ]),
 
-    new Question("2 / 2 = ", 
+    new Question("Моя рабочая смена длится 6 … .", 
     [
-        new Answer("0", 0),
-        new Answer("1", 1),
-        new Answer("2", 0),
-        new Answer("3", 0)
+         new Answer("А. час", 0),
+        new Answer("Б. часа", 0),
+        new Answer("В. часов", 1),
+        new Answer("Г. Часа", 0)
     ]),
 
-    new Question("2 - 2 = ", 
+    new Question("Позавчера в ресторане … директора.", 
     [
-        new Answer("0", 1),
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 0)
+      new Answer("А. не быть", 0),
+        new Answer("Б. нет", 0),
+        new Answer("В. не было", 1),
+        new Answer("Г. не будет", 0)
     ]),
 
-    new Question("2 + 2 * 2 = ", 
+    new Question("Сегодня у меня … денег, поэтому обед оплачиваешь ты.", 
     [
-        new Answer("4", 0),
-        new Answer("6", 1),
-        new Answer("8", 0),
-        new Answer("10", 0)
+         new Answer("А. не будет", 0),
+        new Answer("Б. нет", 1),
+        new Answer("В. не было", 0),
+        new Answer("Г. не быть", 0)
     ]),
 
-    new Question("2 + 2 / 2 = ", 
+    new Question("Никто не знает, что … завтра.", 
     [
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 1),
-        new Answer("4", 0)
-    ])
+        new Answer("А. быть", 0),
+        new Answer("Б. не было", 0),
+        new Answer("В. будет", 1),
+        new Answer("Г. есть", 0)
+    ]),
+
+      new Question("Он любит кофе … молока.", 
+    [
+        new Answer("А. для", 0),
+        new Answer("Б. из", 0),
+        new Answer("В. без", 1),
+        new Answer("Г. Кроме", 0)
+    ]),
+       new Question("Иван заказал пиццу … мяса.", 
+    [
+        new Answer("А. после", 0),
+        new Answer("Б. без", 1),
+        new Answer("В. кроме", 0),
+        new Answer("Г. Для", 0)
+    ]),
+        new Question("Положите  … мяса.", 
+    [
+        new Answer("А. после", 0),
+        new Answer("Б. без", 1),
+        new Answer("В. кроме", 0),
+        new Answer("Г. Для", 0)
+    ]),
+         new Question("Вчера наш директор уволил 14 …", 
+    [
+        new Answer("А. человек", 1),
+        new Answer("Б. человека", 0),
+        new Answer("В. людях", 0),
+        new Answer("Г. Люди", 0)
+    ]),
+          new Question("У нас работает 36 …", 
+    [
+        new Answer("А. официанта", 0),
+        new Answer("Б. официант", 0),
+        new Answer("В. официантом", 0),
+        new Answer("Г. официантов", 1)
+    ]),
+
+ new Question("Джон уже был в этом ресторане 5 …", 
+    [
+        new Answer("А. раза", 0),
+        new Answer("Б. разей", 0),
+        new Answer("В. раз", 1),
+        new Answer("Г. разов", 0)
+    ]),
+
+ new Question("У меня нет ни ..., ни  ...", 
+    [
+        new Answer("А. время, деньги", 0),
+        new Answer("Б. времени, денег", 1),
+        new Answer("В. времени, денги ", 0),
+        new Answer("Г. время, деньгов ", 0)
+    ]),
+
 ];
-
-
-
-//Массив с вопросами
-const questions3 = 
-[
-    new Question("2 + 2 = ", 
-    [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
-    ]),
-
-    new Question("2 * 2 = ", 
-    [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
-    ]),
-
-    new Question("2 / 2 = ", 
-    [
-        new Answer("0", 0),
-        new Answer("1", 1),
-        new Answer("2", 0),
-        new Answer("3", 0)
-    ]),
-
-    new Question("2 - 2 = ", 
-    [
-        new Answer("0", 1),
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 0)
-    ]),
-
-    new Question("2 + 2 * 2 = ", 
-    [
-        new Answer("4", 0),
-        new Answer("6", 1),
-        new Answer("8", 0),
-        new Answer("10", 0)
-    ]),
-
-    new Question("2 + 2 / 2 = ", 
-    [
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 1),
-        new Answer("4", 0)
-    ])
-];
-
-
-
-//Массив с вопросами
-const questions4 = 
-[
-    new Question("2 + 2 = ", 
-    [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
-    ]),
-
-    new Question("2 * 2 = ", 
-    [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
-    ]),
-
-    new Question("2 / 2 = ", 
-    [
-        new Answer("0", 0),
-        new Answer("1", 1),
-        new Answer("2", 0),
-        new Answer("3", 0)
-    ]),
-
-    new Question("2 - 2 = ", 
-    [
-        new Answer("0", 1),
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 0)
-    ]),
-
-    new Question("2 + 2 * 2 = ", 
-    [
-        new Answer("4", 0),
-        new Answer("6", 1),
-        new Answer("8", 0),
-        new Answer("10", 0)
-    ]),
-
-    new Question("2 + 2 / 2 = ", 
-    [
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 1),
-        new Answer("4", 0)
-    ])
-];
-
-
-
-//Массив с вопросами
-const questions5 = 
-[
-    new Question("2 + 2 = ", 
-    [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
-    ]),
-
-    new Question("2 * 2 = ", 
-    [
-        new Answer("2", 0),
-        new Answer("3", 0),
-        new Answer("4", 1),
-        new Answer("0", 0)
-    ]),
-
-    new Question("2 / 2 = ", 
-    [
-        new Answer("0", 0),
-        new Answer("1", 1),
-        new Answer("2", 0),
-        new Answer("3", 0)
-    ]),
-
-    new Question("2 - 2 = ", 
-    [
-        new Answer("0", 1),
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 0)
-    ]),
-
-    new Question("2 + 2 * 2 = ", 
-    [
-        new Answer("4", 0),
-        new Answer("6", 1),
-        new Answer("8", 0),
-        new Answer("10", 0)
-    ]),
-
-    new Question("2 + 2 / 2 = ", 
-    [
-        new Answer("1", 0),
-        new Answer("2", 0),
-        new Answer("3", 1),
-        new Answer("4", 0)
-    ])
-];
-
-
-
-
 
 
 
 var x=localStorage.getItem("code");
-var quiz = "";
+var quiz = ""
 //Сам тест
 switch(x) {
-  case '1': var quiz = new Quiz(1, questions1, results);
+  case '1': var quiz =new Quiz(1, questions1, results);
    break;
 
   case '2': var quiz = new Quiz(1, questions2, results);
    break;
-  case '3': var quiz = new Quiz(1, questions3, results);
-  break;
-      case '4': var quiz = new Quiz(1, questions4, results);
-    break;
-      case '5': var quiz = new Quiz(1, questions5, results);
-    break;
 }
 
 
