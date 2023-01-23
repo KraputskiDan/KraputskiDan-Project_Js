@@ -112,20 +112,21 @@ ul {
 }
 
 #content_lesson_page {
-	grid-template-columns: 250px auto 250px;
-    grid-template-rows: 100px auto;
+	grid-template-columns: auto auto;
+	grid-row: 2;	
+    grid-template-rows: auto;
     grid-gap: 1vw;
 }
 
 #content_lesson {
-	grid-column: 1/ span 3;
-	grid-row: 2;
+	grid-column: 1/ span 5;
+	grid-row: 1;
 	border: solid 2px;
 	width: auto;
 	height: auto;
 	margin: 15px;
-	margin-right: 5%;
-	margin-left: 5%;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
 }
 
 #ul_lesson a {
@@ -136,6 +137,8 @@ ul {
 	display: grid;
 	grid-template-columns: auto 135px;
 	border: solid 2px;
+	padding: 10px;
+	margin: 10px;
 }
 
 #ul_lesson li > div {
@@ -766,10 +769,11 @@ grid-area: c;
 
 #content_recipes_page {
 	grid-template-areas: 
-	"z a w"
-	"c b e";
+	"a a a"
+	"b b b";
 	grid-template-columns: 25% auto 25%;
     grid-gap: 1vw;
+    grid-auto-columns: max-content;
 }
 
 #content_recipes_page h1 {
@@ -781,14 +785,12 @@ grid-area: c;
 	grid-area: b;
 	display: grid;
 	grid-template-areas: 
-	"a" 
-	"b" 
-	"c" 
-	"d" 
-	"e" 
-	"f" 
-	"g" 
-	"h";
+	"a a b b" 
+	"c c d d"
+	"e e f f"
+	"g g h h" 	;
+
+
 }
 
 #content_recipes_page #article_recipes .recipes_bloc_1,
