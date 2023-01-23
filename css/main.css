@@ -111,7 +111,7 @@ ul {
 }
 
 #content_lesson {
-	grid-column: 1/ span 2;
+	grid-column: 1/ span 3;
 	grid-row: 2;
 	border: solid 2px;
 	width: auto;
@@ -176,7 +176,7 @@ ul {
 
 #ls2_content_gt_1 .text_content_gt_1 {
 	margin: auto;
-	width: 75%;
+	width: 90%;
 	font-size: 17px;
 }
 
@@ -187,17 +187,19 @@ ul {
 .text_content_gt_2 {
 	grid-area: b;
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25%;
-	grid-template-rows: auto auto;
+	/*grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: auto auto;*/
 	justify-content: center;
 	margin-left: 25px;
 	margin-right: 25px;
+	margin: 30px 0 0 0
 }
 
 .text_content_gt_2 span {
 	margin-top: 15px;
 	font-size: 22px;
 	text-align: center;
+	padding: 0px 15px 0px 15px;
 }
 
 .text_curly_bracket {
@@ -213,12 +215,47 @@ ul {
 	grid-area: c;
 	display: grid;
 	grid-template-areas:
-    "a a a"
-"b c d"
-"e f f"
-"w w w";
+    "b c d"
+	"f e e"
+	"a a a";
    	grid-template-columns: auto auto 250px;
    	padding: 15px;
+}
+
+.text_content_gt_3_lessons2 {
+grid-area: c;
+	display: grid;
+	grid-template-areas:
+    "b c c"
+	"d e e"
+	"a a a";
+   	grid-template-columns: auto auto 250px;
+   	padding: 15px;
+
+}
+
+#main_Game{
+	display: grid;
+	grid-template-areas: 
+	"a a a";	
+	grid-template-columns: 25% 750px 25%;
+    grid-gap: 1vw;
+  	margin-top: 35px;
+  	margin-bottom: 35px;
+  	background: rgb(235 235 235);
+}
+
+.text_content_gt_3_Recipes {
+	grid-area: a;
+	display: grid;
+	grid-template-areas:
+    "b c d"
+	"f f f"
+	"f f f"
+	"w w w";
+   	grid-template-columns: auto;
+   	padding: 10%;
+ justify-content: space-between;
 }
 
 .text_content_gt_3 li {
@@ -965,3 +1002,60 @@ body {
 
 
 
+.braces {
+display: inline-block;
+position: relative;
+padding:1.4em 4.6em;
+margin-bottom: 1em;
+}
+.braces::before,
+.braces::after,
+.curly::before,
+.curly::after {
+content: "";
+position:absolute;
+width: 25%;
+height: .8em;
+}
+.braces::before,
+.braces::after {
+bottom: 0;
+border-bottom: 2px solid;
+}
+.braces::before {
+left: 0;
+border-bottom-left-radius: .8em;
+}
+.braces::after {
+right: 0;
+border-bottom-right-radius: .8em;
+}
+.curly::before,
+.curly::after {
+bottom: -.8em;
+border-top: 2px solid;
+}
+.curly::before {
+left: 25%;
+border-top-right-radius: .85em;
+}
+.curly::after {
+right: 25%;
+border-top-left-radius: .8em;
+}
+.braces div {
+display: inline-flex;
+margin: .8em;
+}
+
+#content_lesson ul {
+	padding: 25px;
+}
+
+.pdf {
+    display: block;
+    float: left;
+    margin: -7px 6px 0 0;
+    width: 40px;
+    height: 40px;
+}
