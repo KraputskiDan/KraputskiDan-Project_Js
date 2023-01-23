@@ -25,7 +25,14 @@ header {
 }
 
 #logo {
-	margin: 10px;
+	background-image: url("../img/Logo.png")  	;
+	 background-repeat: no-repeat;
+      background-size: cover;
+      /*padding: 0px;*/
+      margin: 10px 0 0 10%;
+      width: 60px;
+      height: 50px;
+
 }
 
 #logo a {
