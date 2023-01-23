@@ -214,11 +214,11 @@ ul {
 	display: grid;
 	grid-template-areas:
     "a a a"
-    "b c z"
-   	"d e y"
-   	"f w w";
+"b c d"
+"e f f"
+"w w w";
    	grid-template-columns: auto auto 250px;
-   	padding: 25px;
+   	padding: 15px;
 }
 
 .text_content_gt_3 li {
@@ -279,8 +279,8 @@ ul {
 	display: grid;
 	grid-template-columns: auto auto;
 	justify-content: start;
-	margin-top: 7px;
-	padding-bottom: 8px;
+	margin-top: 12px;
+	padding-bottom: 14px;
 }
 
 .text_content_gt_3 ul {
@@ -373,6 +373,8 @@ ul {
 #gt_4_el_11 {
 	grid-area: k;
 	text-align: center;
+	border-top: solid 1px;
+	margin: 10px 0 0 0;
 }
 
 .text_content_gt_5 {
@@ -463,6 +465,7 @@ ul {
 #gt_5_el_8 {
 	grid-area: k;
 	text-align: center;
+	border-top: solid 1px	;
 }
 
 .text_content_gt_1 ul {
@@ -640,6 +643,7 @@ ul {
 	grid-area: a;
 	font-size: 24px;
 	padding-top: 20px;
+	border-bottom: solid 1px;
 }
 
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_2 .gt_4_block_2,
@@ -845,6 +849,7 @@ body {
    	"z z z"
    	"x x x"
    	"v v v";
+
 }
 
 #ls1_content_1 .text_content_gt_2 {
