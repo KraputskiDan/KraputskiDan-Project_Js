@@ -852,19 +852,7 @@ grid-area: c;
 	grid-area: h;
 }
 
-.cursor {
-  width: 60px;
-  height: 30px;
-  transform: translate(-50%,-50%);
-  position: absolute;
-  background-color: red;
-}
 
-.block_connect {
-	width: 60px;
-  	height: 30px;
-  	border: solid 1px;
-}
 
 body {
 	user-select: none;
@@ -920,14 +908,58 @@ body {
 	grid-template-columns: auto;
 }
 
+
+
+
+
+
+
+.block_connect {
+	width: 60px;
+  	height: 30px;
+  	border: solid 1px;
+}
+
+
 .block_cursor {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: 5% 5% 5% 5% 5%;
     margin-top: 25px;
-    margin-left: 75px;
+    margin-left: 95px;
     grid-gap: 1vw;
 }
+
+
+.draggable{
+    /*padding: 5px;*/
+	border:1px solid #999;
+	font: 16px Times New Roman;
+    margin: -9px 10px 12px;
+	padding:4px;
+	/*font: 13px verdana;*/
+	cursor: pointer;	
+	float:left;
+	color:#000;
+	cursor: move;
+}
+
+
+
+
+.droppable.ui-droppable.full.ui-droppable-disabled.ui-state-disabled{
+	margin: 0 -5px 0 0;
+	cursor: move;
+	}
+
+.droppable {
+	position: relative;
+	margin: 0 -5px 0 0;
+}
+
+
+
+
 
 .block_cursor {
 	grid-template-areas: 
@@ -1080,14 +1112,8 @@ margin: .8em;
 } 
 
 
-/*#content_grammer_topic_page .text_content_gt_6 {
 
 
-	grid-template-areas: 
-	"a a a"
-	"b c d"
-	"f e e";
-} */
 
 .if_learning{
 
@@ -1096,6 +1122,9 @@ margin: .8em;
 .if_correct{
 	display: none;
 }
+
+
+
 
 input{
 	border:1px solid #808080;
@@ -1109,3 +1138,36 @@ input{
 .errorTask {
 	background: red;
 }
+
+
+.animated-button {
+  text-decoration: none;
+  display: inline-block;
+  margin: 10px 20px;
+  padding: 15px 30px;
+  overflow: hidden;
+  border: 2px solid;
+  border-bottom-width: 4px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: black;
+  background: rgba(255, 255, 255, 1);
+  transition: color .3s, background .5s;
+}
+.animated-button:hover {
+  animation: stripes .75s infinite linear;
+  background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+  background-size: 10px 10px;
+  color: #FF50E5;
+}
+@keyframes stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 0;
+  }
+
+
