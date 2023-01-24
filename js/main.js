@@ -1,4 +1,3 @@
-console.log("NaN")
 
 
 const cursor = document.querySelectorAll('.cursor');
@@ -126,57 +125,48 @@ radioButton.forEach(element => element.addEventListener('change', e => {
   switch (Number(element.getAttribute("value"))) {
     case 1:
       table = `<ul>`
-      table += `<li>1.  Почему Джеин не писала?</<li>`
-      table += `<li><button type="button" value="1">поэтому не было времени</button></<li>`
-      table += `<li><button type="button" value="2">потому что не было времени </button></<li>`
-      table += `<li><button type="button" value="3">потому, что была на рынке </button></<li>`
+      table += `<li>1. Их заказ стоит … </<li>`
+      table += `<li><button type="button" value="1">1360 рублей</button></<li>`
+      table += `<li><button type="button" value="2">1630 рублей</button></<li>`
+      table += `<li><button type="button" value="3">1360 рубль</button></<li>`
       table += `</ul>`
       document.getElementById("testInfo").innerHTML = table;
       break;
     case 2:
       table = `<ul>`
-      table += `<li>2.  Джеин поедет в</<li>`
-      table += `<li><button type="button" value="1">Тулу </button></<li>`
-      table += `<li><button type="button" value="2">Туле </button></<li>`
-      table += `<li><button type="button" value="3">Тулы</button></<li>`
+      table += `<li>2. Джон будет … </<li>`
+      table += `<li><button type="button" value="1">пиццу без сыра и лазанью без соуса</button></<li>`
+      table += `<li><button type="button" value="2">пиццу без мяса и лазанью без сыра</button></<li>`
+      table += `<li><button type="button" value="3">мясную пиццу и лазанью без соуса</button></<li>`
       table += `</ul>`
       document.getElementById("testInfo").innerHTML = table;
       break;
     case 3:
       table = `<ul>`
-      table += `<li>3.  В Туле делают </<li>`
-      table += `<li><button type="button" value="1">самовары и матрешки </button></<li>`
-      table += `<li><button type="button" value="2">пряники и матрешки  </button></<li>`
-      table += `<li><button type="button" value="3">самовары и пряники</button></<li>`
+      table += `<li>3. Марк будет … </<li>`
+      table += `<li><button type="button" value="1">пасту без базилика </button></<li>`
+      table += `<li><button type="button" value="2">пиццу без кока-колы </button></<li>`
+      table += `<li><button type="button" value="3">пиццу и кока-колу</button></<li>`
       table += `</ul>`
       document.getElementById("testInfo").innerHTML = table;
       break;
     case 4:
       table = `<ul>`
-      table += `<li>4.  Лев Толстой – это </<li>`
-      table += `<li><button type="button" value="1">известный русский писатель </button></<li>`
-      table += `<li><button type="button" value="2">известный русский художник  </button></<li>`
-      table += `<li><button type="button" value="3">известный русский музыкант</button></<li>`
+      table += `<li>4. Наташа будет … </<li>`
+      table += `<li><button type="button" value="1">сэндвич без мяса</button></<li>`
+      table += `<li><button type="button" value="2"> большой сэндвич</button></<li>`
+      table += `<li><button type="button" value="3">сэндвич без масла</button></<li>`
       table += `</ul>`
       document.getElementById("testInfo").innerHTML = table;
       break;
     case 5:
       table = `<ul>`
-      table += `<li>5.  Его русские коллеги говорят, что на рынке очень</<li>`
-      table += `<li><button type="button" value="1">страшно  </button></<li>`
-      table += `<li><button type="button" value="2">экстремально  </button></<li>`
-      table += `<li><button type="button" value="3">весело</button></<li>`
+      table += `<li>5.  Елена будет … </<li>`
+      table += `<li><button type="button" value="1">пиццу без газа</button></<li>`
+      table += `<li><button type="button" value="2">пиццу без мяса и без сыра</button></<li>`
+      table += `<li><button type="button" value="3">пиццу без мяса и без газа</button></<li>`
       document.getElementById("testInfo").innerHTML = table;
       table += `</ul>`
-      break;
-    case 6:
-      table = `<ul>`
-      table += `<li>6.  Фудкорты, это места </<li>`
-      table += `<li><button type="button" value="1">где не нужно бронировать столик   </button></<li>`
-      table += `<li><button type="button" value="2">где всегда невкусная еда  </button></<li>`
-      table += `<li><button type="button" value="3">где много много туристов </button></<li>`
-      table += `</ul>`
-      document.getElementById("testInfo").innerHTML = table;
       break;
     default:
       // statements_def
@@ -194,3 +184,29 @@ radioButton.forEach(element => element.addEventListener('change', e => {
 }))
 
     
+
+  function  task1_4(){
+
+      var task = document.getElementById("task1_4").querySelectorAll('p .if_learning');
+      var right_task = document.getElementById("task1_4").querySelectorAll('p .if_correct');
+
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }

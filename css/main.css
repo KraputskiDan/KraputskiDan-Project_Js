@@ -968,7 +968,7 @@ body {
         "q t r"
         "y h h"
         "k k k";
-    grid-template-columns: 10% 250px 250px;
+    grid-template-columns: auto auto auto;
     padding: 25px;
 }
 
@@ -1067,4 +1067,45 @@ margin: .8em;
     margin: -7px 6px 0 0;
     width: 40px;
     height: 40px;
+}
+
+
+#content_grammer_topic_page .text_content_gt_3 {
+
+
+	grid-template-areas: 
+	"a a a"
+	"b c d"
+	"f e e";
+} 
+
+
+/*#content_grammer_topic_page .text_content_gt_6 {
+
+
+	grid-template-areas: 
+	"a a a"
+	"b c d"
+	"f e e";
+} */
+
+.if_learning{
+
+}
+
+.if_correct{
+	display: none;
+}
+
+input{
+	border:1px solid #808080;
+	height:18px;
+	}
+
+.successfulTask {
+	background: green;
+}
+
+.errorTask {
+	background: red;
 }
