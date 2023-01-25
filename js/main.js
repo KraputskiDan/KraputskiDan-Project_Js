@@ -204,7 +204,7 @@ function task1_3(){
     }))
 }
 
-task1_3();
+
 
 
 function task1_7(){
@@ -296,7 +296,7 @@ radioButton.forEach(element => element.addEventListener('change', e => {
 }))
 }
 
-task1_7();
+
 
 
   function  task1_4(){
@@ -351,3 +351,84 @@ task1_7();
     }
 
   }
+
+
+  function task2_5(){
+      let radioButton = document.querySelectorAll("input[name='test2_5']");
+    let table;
+
+    document.getElementById("testInfo2_5").innerHTML = `<ul><li>1. У Джейн в фирме есть 14 ... </<li><li><button type="button" value="1">коллега </button></<li><li><button type="button" value="2">коллеги </button></<li><li><button type="button" value="3">коллег</button></<li></ul>`
+
+    let buttonChange = document.querySelectorAll("#testInfo2_5 button");
+
+    buttonChange.forEach(element => element.addEventListener('click', e=> {
+
+      element.style.background = `red`
+
+      buttonChange.forEach(el => {if(el != find.call(buttonChange, k => k == element)) el.style.background = 'none'})
+    }) 
+      // statements
+    );
+
+    radioButton.forEach(element => element.addEventListener('change', e => { 
+      switch (Number(element.getAttribute("value"))) {
+        case 1:
+          table = `<ul>`
+          table += `<li>1. У Джейн в фирме есть 14 ...</<li>`
+          table += `<li><button type="button" value="1">коллега </button></<li>`
+          table += `<li><button type="button" value="2">коллеги </button></<li>`
+          table += `<li><button type="button" value="3">коллег</button></<li>`
+          table += `</ul>`
+          document.getElementById("testInfo2_5").innerHTML = table;
+          break;
+        case 2:
+          table = `<ul>`
+          table += `<li>2. Сейчас Джейн знает ... </<li>`
+          table += `<li><button type="button" value="1">новые русские слова и выражения </button></<li>`
+          table += `<li><button type="button" value="2">новые русские блюда</button></<li>`
+          table += `<li><button type="button" value="3">ничего нового не узнала</button></<li>`
+          table += `</ul>`
+          document.getElementById("testInfo2_5").innerHTML = table;
+          break;
+        case 3:
+          table = `<ul>`
+          table += `<li>3. Стандартный русский тость – это </<li>`
+          table += `<li><button type="button" value="1"> На здоровье! </button></<li>`
+          table += `<li><button type="button" value="2"> Будьте здоровы!</button></<li>`
+          table += `<li><button type="button" value="3">За здоровье </button></<li>`
+          table += `</ul>`
+          document.getElementById("testInfo2_5").innerHTML = table;
+          break;
+        case 4:
+          table = `<ul>`
+          table += `<li>4. Последний тост по-русски – это ... </<li>`
+          table += `<li><button type="button" value="1"> на последний </button></<li>`
+          table += `<li><button type="button" value="2"> на посошок </button></<li>`
+          table += `<li><button type="button" value="3">в посошок </button></<li>`
+          table += `</ul>`
+          document.getElementById("testInfo2_5").innerHTML = table;
+          break;
+        case 5:
+          table = `<ul>`
+          table += `<li>5. Утром, когда болит голова после вечеринки – это .... </<li>`
+          table += `<li><button type="button" value="1">помеха </button></<li>`
+          table += `<li><button type="button" value="2">похмелье </button></<li>`
+          table += `<li><button type="button" value="3">послевкусие </button></<li>`
+          document.getElementById("testInfo2_5").innerHTML = table;
+          table += `</ul>`
+          break;
+        default:
+          // statements_def
+          break;
+      }
+
+      let button = document.querySelectorAll("#testInfo2_5 button");
+      button.forEach(element => element.addEventListener('click', e=> {
+
+      element.style.background = `red`
+
+      button.forEach(el => {if(el != find.call(button, k => k == element)) el.style.background = 'none'})
+    })) 
+
+    }))
+}
