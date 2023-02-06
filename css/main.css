@@ -260,8 +260,8 @@ grid-area: c;
 	display: grid;
 	grid-template-areas:
     "b c d"
-	"f f f"
-	"f f f"
+	"e f g"
+	"z z z"
 	"w w w";
    	grid-template-columns: auto;
    	padding: 10%;
