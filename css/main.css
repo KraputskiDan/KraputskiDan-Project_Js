@@ -1120,7 +1120,8 @@ margin: .8em;
 }
 
 .if_correct{
-	display: none;
+	/*display: none;*/
+	color: red;
 }
 
 
