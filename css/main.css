@@ -437,6 +437,7 @@ grid-area: c;
    	"k k k";
    	grid-template-columns: 250px 250px 250px;
    	padding: 25px;
+   	height: 300px;
 }
 
 .text_content_gt_5 li {
@@ -852,8 +853,6 @@ grid-area: c;
 	grid-area: h;
 }
 
-
-
 body {
 	user-select: none;
 }
@@ -908,18 +907,11 @@ body {
 	grid-template-columns: auto;
 }
 
-
-
-
-
-
-
 .block_connect {
 	width: 60px;
   	height: 30px;
   	border: solid 1px;
 }
-
 
 .block_cursor {
     display: grid;
@@ -929,7 +921,6 @@ body {
     margin-left: 95px;
     grid-gap: 1vw;
 }
-
 
 .draggable{
     /*padding: 5px;*/
@@ -944,9 +935,6 @@ body {
 	cursor: move;
 }
 
-
-
-
 .droppable.ui-droppable.full.ui-droppable-disabled.ui-state-disabled{
 	margin: 0 -5px 0 0;
 	cursor: move;
@@ -956,10 +944,6 @@ body {
 	position: relative;
 	margin: 0 -5px 0 0;
 }
-
-
-
-
 
 .block_cursor {
 	grid-template-areas: 
@@ -1039,10 +1023,6 @@ body {
 	grid-area: v;
 }
 
-
-
-
-
 .braces {
 display: inline-block;
 position: relative;
@@ -1111,10 +1091,6 @@ margin: .8em;
 	"f e e";
 } 
 
-
-
-
-
 .if_learning{
 
 }
@@ -1123,9 +1099,6 @@ margin: .8em;
 	/*display: none;*/
 	color: red;
 }
-
-
-
 
 input{
 	border:1px solid #808080;
@@ -1157,6 +1130,7 @@ input{
   background: rgba(255, 255, 255, 1);
   transition: color .3s, background .5s;
 }
+
 .animated-button:hover {
   animation: stripes .75s infinite linear;
   background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
@@ -1171,4 +1145,35 @@ input{
     background-position: 50px 0;
   }
 
+}
 
+#test1_3, #test1_7 {
+	grid-area: b;
+}
+
+#test1_7 {
+	height: 300px;
+}
+
+#testInfo1_3 {
+	display: grid;
+	grid-template-areas: "a";
+}
+
+#test_section_1, #test_section_2, #test_section_3, #test_section_4, #test_section_5, #test_section_6 {
+	width: 245px;
+	height: 110px;
+	background: rgb(235 235 235);
+	z-index: 0;
+	position: absolute;
+}
+
+#test_section_1 {
+	z-index: 1;
+}
+
+#button_result_t_1_3, #button_result_t_1_7 {
+	display: block;
+	grid-area: q;
+	height: 30px;
+}
