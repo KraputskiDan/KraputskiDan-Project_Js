@@ -1147,11 +1147,11 @@ input{
 
 }
 
-#test1_3, #test1_7 {
+#test1_3, #test1_7, #test2_5 {
 	grid-area: b;
 }
 
-#test1_7 {
+#test1_7, #test2_5 {
 	height: 300px;
 }
 
@@ -1172,8 +1172,12 @@ input{
 	z-index: 1;
 }
 
-#button_result_t_1_3, #button_result_t_1_7 {
+#button_result_t_1_3, #button_result_t_1_7, #button_result_t_2_5 {
 	display: block;
 	grid-area: q;
 	height: 30px;
+}
+
+#test1_3 div {
+	margin-bottom: 10px;
 }
