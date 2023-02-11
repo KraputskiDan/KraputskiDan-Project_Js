@@ -329,6 +329,111 @@ function task1_7(){
     }))
 }
 
+function task3_7() {
+    let radioButtonChange1 = document.querySelectorAll("input[name='test3_7_1']");
+    let radioButtonChange2 = document.querySelectorAll("input[name='test3_7_2']");
+    let radioButtonChange3 = document.querySelectorAll("input[name='test3_7_3']");
+    let radioButtonChange4 = document.querySelectorAll("input[name='test3_7_4']");
+    
+    let result = 0;
+
+    if(radioButtonChange1[1].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange2[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange3[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange4[0].checked)
+    {
+      result += 1;
+    }
+
+    console.log(result)
+}
+
+function task3_8() {
+    let radioButtonChange1 = document.querySelectorAll("input[name='test3_8_1']");
+    let radioButtonChange2 = document.querySelectorAll("input[name='test3_8_2']");
+    let radioButtonChange3 = document.querySelectorAll("input[name='test3_8_3']");
+    let radioButtonChange4 = document.querySelectorAll("input[name='test3_8_4']");
+    let radioButtonChange5 = document.querySelectorAll("input[name='test3_8_5']");
+    let radioButtonChange6 = document.querySelectorAll("input[name='test3_8_6']");
+    let radioButtonChange7 = document.querySelectorAll("input[name='test3_8_7']");
+    let radioButtonChange8 = document.querySelectorAll("input[name='test3_8_8']");
+    let radioButtonChange9 = document.querySelectorAll("input[name='test3_8_9']");
+    let radioButtonChange10 = document.querySelectorAll("input[name='test3_8_10']");
+    let radioButtonChange11 = document.querySelectorAll("input[name='test3_8_11']");
+    
+    let result = 0;
+
+    if(radioButtonChange1[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange2[1].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange3[1].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange4[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange5[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange6[1].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange7[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange8[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange9[1].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange10[0].checked)
+    {
+      result += 1;
+    }
+
+    if(radioButtonChange11[0].checked)
+    {
+      result += 1;
+    }
+
+    console.log(result)
+}
+
+
 function task3_10() {
     let radioButtonChange1 = document.querySelectorAll("input[name='test3_10_1']");
     let radioButtonChange2 = document.querySelectorAll("input[name='test3_10_2']");
