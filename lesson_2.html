@@ -62,7 +62,7 @@
 
         <div class="task learning  typsecond" style='grid-template-areas:"b a"; display:grid;'>
 
-          <div class="ctask text_with_block">
+          <div class="ctask text_with_block" style="grid-area: b;">
             <p><strong>Директор:</strong> Так. Марк. Ты знаешь, сейчас кризис. И поэтому я не могу платить зарплату всем. Я должна уволить <span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span>  процентов сотрудников.</p>
             <p><strong>Марк:</strong> Сколько?</p>
             <p><strong>Директор:</strong> Да, да, знаю. Это много. Но что я могу сделать? Если я сейчас не уволю эти <span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span> процентов…</p>
@@ -74,7 +74,7 @@
            
           </div>
 
-          <div class="textalign droppable droppable_default if_learning ui-droppable ">
+          <div class="textalign droppable droppable_default if_learning ui-droppable " style="grid-area: a;">
             <span class="draggable ui-draggable cursor" style="position: relative;">4</span>
             <span class="draggable ui-draggable" style="position: relative;">50</span>
             <span class="draggable ui-draggable" style="position: relative;">9</span>
@@ -273,7 +273,7 @@
           </section>
           
         </form>
-        <button type="button" id="button_result_t_2_5">Click me</button>
+        <button type="button" id="button_result_t_2_5" onclick="result_t_2_5()">Click me</button>
       </div>
       <div class="text_content_gt_12"></div>
     </section>

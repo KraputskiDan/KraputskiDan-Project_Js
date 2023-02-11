@@ -901,7 +901,8 @@ body {
 	text-align: inherit;
 }
 
-#ls1_content_1 .text_content_gt_2 .ls1_figure_1, #ls1_content_1 .text_content_gt_2 .ls1_figure_1 {
+#ls1_content_1 .text_content_gt_2 .ls1_figure_1, 
+#ls1_content_1 .text_content_gt_10 .ls1_figure_1 {
 	grid-area: d;
 	display: grid;
 	grid-template-columns: auto;

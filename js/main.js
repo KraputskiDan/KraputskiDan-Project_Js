@@ -96,7 +96,7 @@ const rightAnswerT1_3 = [
   {answer: 3}
 ]
 
-document.getElementById("button_result_t_1_3").onclick = () => {
+function result_t_1_3() {
     let buttonsSection_1 = document.querySelectorAll("#test1_3 #test_section_1 button");
     let buttonsSection_2 = document.querySelectorAll("#test1_3 #test_section_2 button");
     let buttonsSection_3 = document.querySelectorAll("#test1_3 #test_section_3 button");
@@ -157,7 +157,7 @@ const rightAnswerT1_7 = [
   {answer: 3}
 ]
 
-document.getElementById("button_result_t_1_7").onclick = () => {
+function result_t_1_7() {
     let buttonsSection_1 = document.querySelectorAll("#test1_7 #test_section_1 button");
     let buttonsSection_2 = document.querySelectorAll("#test1_7 #test_section_2 button");
     let buttonsSection_3 = document.querySelectorAll("#test1_7 #test_section_3 button");
@@ -372,7 +372,7 @@ function task3_10() {
     console.log(result)
 }
 
-function task3_10() {
+function task3_11() {
     let radioButtonChange1 = document.querySelectorAll("input[name='test3_11_1']");
     let radioButtonChange2 = document.querySelectorAll("input[name='test3_11_2']");
     let radioButtonChange3 = document.querySelectorAll("input[name='test3_11_3']");
@@ -439,10 +439,10 @@ function task3_10() {
   }
 
   function  task1_4(){
-
-      var task = document.getElementById("task1_4").querySelectorAll('p .if_learning');
-      var right_task = document.getElementById("task1_4").querySelectorAll('p .if_correct');
-
+      console.log("asd")
+      let task = document.getElementById("task1_4").querySelectorAll('p .if_learning');
+      let right_task = document.getElementById("task1_4").querySelectorAll('p .if_correct');
+console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
         if(task[i].value === right_task[i].innerHTML)
         {
@@ -585,7 +585,7 @@ const rightAnswerT12_5 = [
   {answer: 3}
 ]
 
-document.getElementById("button_result_t_2_5").onclick = () => {
+function result_t_2_5() {
     let buttonsSection_1 = document.querySelectorAll("#test2_5 #test_section_1 button");
     let buttonsSection_2 = document.querySelectorAll("#test2_5 #test_section_2 button");
     let buttonsSection_3 = document.querySelectorAll("#test2_5 #test_section_3 button");
