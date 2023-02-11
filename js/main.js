@@ -410,6 +410,34 @@ function task3_10() {
 }
 
 
+
+
+  function  task2_2(){
+
+      var task = document.getElementById("task2_2").querySelectorAll('p .if_learning');
+      var right_task = document.getElementById("task2_2").querySelectorAll('p .if_correct');
+
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
   function  task1_4(){
 
       var task = document.getElementById("task1_4").querySelectorAll('p .if_learning');
