@@ -464,6 +464,117 @@ console.log(task, right_task)
     }
   }
 
+
+   function  task3_4(){
+      console.log("asd")
+      let task = document.getElementById("task3_4").querySelectorAll('.if_learning');
+      let right_task = document.getElementById("task3_4").querySelectorAll('.if_correct');
+console.log(task, right_task)
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+
+   function  task3_5(){
+      console.log("asd")
+      let task = document.getElementById("task3_5").querySelectorAll('.if_learning');
+      let right_task = document.getElementById("task3_5").querySelectorAll('.if_correct');
+console.log(task, right_task)
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+     function  task3_6(){
+      console.log("asd")
+      let task = document.getElementById("task3_6").querySelectorAll('.if_learning');
+      let right_task = document.getElementById("task3_6").querySelectorAll('.if_correct');
+console.log(task, right_task)
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+   function  task3_9(){
+      console.log("asd")
+      let task = document.getElementById("task3_9").querySelectorAll('.if_learning');
+      let right_task = document.getElementById("task3_9").querySelectorAll('.if_correct');
+console.log(task, right_task)
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+
+
+
+  
+
   function  task1_5(){
 
  var task = document.getElementById("task1_5").querySelectorAll('p .if_learning');
