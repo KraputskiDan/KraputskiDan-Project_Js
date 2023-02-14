@@ -106,10 +106,10 @@ function task1_3(){
 
 const rightAnswerT1_3 = [
   {answer: 1},
-  {answer: 2},
   {answer: 3},
-  {answer: 2},
-  {answer: 3}
+  {answer: 3},
+  {answer: 1},
+  {answer: 2}
 ]
 
 function result_t_1_3() {
@@ -166,12 +166,12 @@ function result_t_1_3() {
 }
 
 const rightAnswerT1_7 = [
+  {answer: 2},
+  {answer: 1},
+  {answer: 3},
   {answer: 1},
   {answer: 2},
-  {answer: 3},
-  {answer: 2},
-  {answer: 3},
-  {answer: 3}
+  {answer: 1}
 ]
 
 function result_t_1_7() {
@@ -812,14 +812,15 @@ console.log(task, right_task)
 }
 
 const rightAnswerT12_5 = [
+  {answer: 3},
   {answer: 1},
-  {answer: 2},
   {answer: 3},
   {answer: 2},
-  {answer: 3}
+  {answer: 2}
 ]
 
 function result_t_2_5() {
+  console.log(result_t_2_5);
     let buttonsSection_1 = document.querySelectorAll("#test2_5 #test_section_1 button");
     let buttonsSection_2 = document.querySelectorAll("#test2_5 #test_section_2 button");
     let buttonsSection_3 = document.querySelectorAll("#test2_5 #test_section_3 button");
@@ -828,27 +829,27 @@ function result_t_2_5() {
 
     buttonsSection_1.forEach(el => {
       if(el.style.background == 'red')
-        if(Number(el.getAttribute("value")) === rightAnswerT1_3[0].answer)
+        if(Number(el.getAttribute("value")) === rightAnswerT12_5[0].answer)
           el.style.background = 'green' 
     })
     buttonsSection_2.forEach(el => {
       if(el.style.background == 'red')
-        if(Number(el.getAttribute("value")) === rightAnswerT1_3[1].answer)
+        if(Number(el.getAttribute("value")) === rightAnswerT12_5[1].answer)
           el.style.background = 'green' 
     })
     buttonsSection_3.forEach(el => {
       if(el.style.background == 'red')
-        if(Number(el.getAttribute("value")) === rightAnswerT1_3[2].answer)
+        if(Number(el.getAttribute("value")) === rightAnswerT12_5[2].answer)
           el.style.background = 'green' 
     })    
     buttonsSection_4.forEach(el => {
       if(el.style.background == 'red')
-        if(Number(el.getAttribute("value")) === rightAnswerT1_3[3].answer)
+        if(Number(el.getAttribute("value")) === rightAnswerT12_5[3].answer)
           el.style.background = 'green' 
     })    
     buttonsSection_5.forEach(el => {
       if(el.style.background == 'red')
-        if(Number(el.getAttribute("value")) === rightAnswerT1_3[4].answer)
+        if(Number(el.getAttribute("value")) === rightAnswerT12_5[4].answer)
           el.style.background = 'green' 
     })
 
@@ -872,3 +873,155 @@ function result_t_2_5() {
     taskResult2_5 = result;    
 
 }
+
+
+
+
+  function  task1_1(){
+      console.log("task1_1")
+      let task = document.getElementById("lesson1-1").querySelectorAll('.format ');
+      let right_task = ['Бизнес','бизнес','Ресторан','Ресторан','Ресторанов',
+      'заведений','арабский ресторан','арабского ресторана','арабского ресторана','деньги'];
+console.log(task, right_task)
+      for (let i = 0; i < task.length; i++) {
+
+        console.log(task[i].innerHTML==right_task[i] );
+        console.log(task[i].innerHTML===right_task[i] );
+         console.log(task[i].innerHTML,right_task[i] );
+
+
+        if(task[i].innerHTML===right_task[i] )
+        {
+          console.log(task[i].innerHTML,right_task[i] );
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+
+  function  task2_1(){
+      console.log("task2_1")
+      let task = document.getElementById("task2_1").querySelectorAll('.format');
+      let right_task = ['50','60','50','4','9'];
+      for (let i = 0; i < task.length; i++) {
+
+        console.log(task[i].innerHTML==right_task[i] );
+        console.log(task[i].innerHTML===right_task[i] );
+         console.log(task[i].innerHTML,right_task[i] );
+
+
+        if(task[i].innerHTML===right_task[i] )
+        {
+          console.log(task[i].innerHTML,right_task[i] );
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+
+    function  task3_1(){
+      console.log("task2_1")
+      let task = document.getElementById("task3_1").querySelectorAll('.format');
+      let right_task = ['зелёных чая','один кофе','латте','Американо с молоком',
+      'капучино','корицу','аллергия','растительное','двойной эспрессо',
+      'ристретто','кофеина','растворимый'];
+       console.log(task,right_task );
+        
+      for (let i = 0; i < task.length; i++) {
+
+        console.log(task[i].innerHTML==right_task[i] );
+        console.log(task[i].innerHTML===right_task[i] );
+         console.log(task[i].innerHTML,right_task[i] );
+       
+
+
+        if(task[i].innerHTML===right_task[i] )
+        {
+          console.log(task[i].innerHTML,right_task[i] );
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+
+  function  task3_2(){
+      console.log("task3_2")
+      let task = document.getElementById("task3_2").querySelectorAll('.format');
+      let right_task = ['веганы или вегетарианцы','без глютена, без ГМО, без соли, без сахара, без кофеина','читать маркировки на этикетках',
+      'Срок годности и условия хранения','комплексный обед','яблочный','апельсиновый',
+      'А борщ на мясном бульоне или вегетарианский','мясо для бульона надо класть в холодную воду','деловой завтрак'];
+       console.log(task,right_task );
+        
+      for (let i = 0; i < task.length; i++) {
+
+        console.log(task[i].innerHTML==right_task[i] );
+        console.log(task[i].innerHTML===right_task[i] );
+         console.log(task[i].innerHTML,right_task[i] );
+       
+
+
+        if(task[i].innerHTML===right_task[i] )
+        {
+          console.log(task[i].innerHTML,right_task[i] );
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+  }
+
+
+
+  
+
+  

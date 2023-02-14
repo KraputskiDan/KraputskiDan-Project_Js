@@ -142,7 +142,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 	    }
 	    return 0;
     }
-
+/*
 	function set_check(task, isRight){
 		task = $(task);
 		var url = 'https://'+location.host+'/answer/';
@@ -236,7 +236,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		lesson_checker.draw_lesson_info();
 	}
-
+*/
 	function check_answers(task, hash){
 
 		hash = hash.replace(/[\s]+/gm,' ').replace(/(^ )|( $)|"/g,'').replace(/<[^>]*>/g,'');

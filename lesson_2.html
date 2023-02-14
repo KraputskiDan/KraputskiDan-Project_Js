@@ -69,7 +69,7 @@
 
         <div class="task learning  typsecond" style='grid-template-areas:"b a"; display:grid;'>
 
-          <div class="ctask text_with_block" style="grid-area: b;">
+          <div class="ctask text_with_block" style="grid-area: b;" id="task2_1">
             <p><strong>Директор:</strong> Так. Марк. Ты знаешь, сейчас кризис. И поэтому я не могу платить зарплату всем. Я должна уволить <span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span>  процентов сотрудников.</p>
             <p><strong>Марк:</strong> Сколько?</p>
             <p><strong>Директор:</strong> Да, да, знаю. Это много. Но что я могу сделать? Если я сейчас не уволю эти <span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span> процентов…</p>
@@ -78,7 +78,8 @@
             <p><strong>Марк:</strong> А так мы будем банкроты через <span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span> месяцев или через год.</p>
             <p><strong>Директор:</strong> Что ты сказал?</p>
             <p><strong>Марк:</strong> Ничего, босс.</p>
-           
+             <button class="animated-button" onclick="task2_1()">Result</button>
+ 
           </div>
 
           <div class="textalign droppable droppable_default if_learning ui-droppable " style="grid-area: a;">
@@ -159,15 +160,15 @@
 
         <div id="task1_5">
           <p>1. У вас есть клиенты? – У нас нет клиент
-            <input type="text" size="1" answer="а" class="if_learning"><span class="if_correct">а</span>.</p>
+            <input type="text" size="1" answer="ов" class="if_learning"><span class="if_correct">ов</span>.</p>
           <p>2. У Сергея есть деньги? – У него нет ден
             <input type="text" size="1" answer="ег" class="if_learning"><span class="if_correct">ег</span>.</p>
-          <p>3. У меня нет нож<input type="text" size="1" answer="а" class="if_learning"><span class="if_correct">а</span> для разделки рыбы. </p>
+          <p>3. У меня нет нож<input type="text" size="1" answer="ей" class="if_learning"><span class="if_correct">ей</span> для разделки рыбы. </p>
            
           <p>4. Извините, у вас есть рубли? – У меня нет рубл<input type="text" size="1" answer="ей" class="if_learning"><span class="if_correct">ей</span>, только дирхамы.</p>
           <p>5. В магазине нет фрукт<input type="text" size="1" answer="ов" class="if_learning"><span class="if_correct">ов</span> и овощ<input type="text" size="1" answer="ей" class="if_learning"><span class="if_correct">ей</span>.</p>
           <p>6. У нашего ресторана нет конкурент
-            <input type="text" size="1" answer="а" class="if_learning"><span class="if_correct">а</span>.</p>
+            <input type="text" size="1" answer="ов" class="if_learning"><span class="if_correct">ов</span>.</p>
           <p>7. Ваш заказ на сумму 8 тысяч<input type="text" size="1" answer="" class="if_learning"><span class="if_correct"></span> рубл<input type="text" size="1" answer="ей" class="if_learning"><span class="if_correct">ей</span>.</p>
           <p>8. У него очень мало сотрудник<input type="text" size="1" answer="ов" class="if_learning"><span class="if_correct">ов</span>.</p>
             <p>9. Дайте, пожалуйста, несколько банан<input type="text" size="1" answer="ов" class="if_learning"><span class="if_correct">ов</span>, лимонов<input type="text" size="1" answer="ов" class="if_learning"><span class="if_correct">ов</span>, и 5 яблок<input type="text" size="1" answer="ок" class="if_learning"><span class="if_correct">ок</span>.</p>
@@ -242,7 +243,7 @@
           <input type="radio" id="testChoise5" name="test2_5" value="5">
           <label for="contactChoice5">5</label>
 
-          <section id="testInfo1_3">
+          <section id="testInfo2_5">
             <ul id="test_section_1"  >
               <li>1. У Джейн в фирме есть 14 ...</li>
               <li><button type="button" value="1">коллега</button></li>
@@ -259,7 +260,7 @@
               <li>3. Стандартный русский тост – это … </li>
               <li><button type="button" value="1">На здоровье! </button></li>
               <li><button type="button" value="2">Будьте здоровы! </button></li>
-              <li><button type="button" value="3">>За здоровье</button></li>
+              <li><button type="button" value="3">За здоровье</button></li>
             </ul>
             <ul id="test_section_4">
               <li>4. Последний тост по-русски – это … </li>
