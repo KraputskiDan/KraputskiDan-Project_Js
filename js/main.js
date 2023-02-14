@@ -1,5 +1,21 @@
 let find = Array.prototype.find;
 
+let taskResult1_3;
+let taskResult1_4;
+let taskResult1_5;
+let taskResult1_7;
+
+let taskResult2_2;
+let taskResult2_5;
+
+let taskResult3_5;
+let taskResult3_6;
+let taskResult3_7;
+let taskResult3_8;
+let taskResult3_9;
+let taskResult3_10;
+let taskResult3_11;
+
 function task1_3(){
     let radioButton = document.querySelectorAll("input[name='test1_3']");
     
@@ -145,7 +161,8 @@ function result_t_1_3() {
 
     result = bG * 20 - bR * 20;
     
-    console.log(result, bG, bR)           
+    console.log(result, bG, bR)     
+    taskResult1_3 = result;       
 }
 
 const rightAnswerT1_7 = [
@@ -212,7 +229,8 @@ function result_t_1_7() {
 
     result = bG * 20 - bR * 20;
     
-    console.log(result, bG, bR)           
+    console.log(result, bG, bR)        
+    taskResult1_7 = result; 
 }
 
 let blockEmpty = document.querySelectorAll('.if_empty');
@@ -850,6 +868,7 @@ function result_t_2_5() {
 
     result = bG * 20 - bR * 20;
     
-    console.log(result, bG, bR)           
+    console.log(result, bG, bR)        
+    taskResult2_5 = result;    
 
 }
