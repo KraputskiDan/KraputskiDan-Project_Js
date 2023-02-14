@@ -12,7 +12,26 @@
 
         <link rel="stylesheet" href="css/main.css">
      <link rel="stylesheet" href="css/tests.css">
-   
+           <style>
+        @font-face {
+            font-family: Pompadur; /* Гарнитура шрифта */
+            src: url(font/font_1.ttf); /* Путь к файлу со шрифтом */
+        }
+        h1 {
+            font-size: 105px;
+            font-family: Pompadur, 'Comic Sans MS', cursive;
+        }
+       
+         h1 {
+            grid-column: 1;
+            text-shadow: #FC0 1px 0 10px;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+  
+        
+  </style>
 </head>
 <body>
     <header id="header">
@@ -54,18 +73,13 @@
                     </div>
 
                     <div class="quiz_footer">
-                        <div class="footer_content" id="pages">0 / 0</div>
+                        <div class="footer_content" id="pages" style="font-size: 36px;">0 / 0</div>
                     </div>
                 </div>
     	</section>
     	
     </main>
-    <footer id="footer">
-    	<span>Create 2023</span>
-    	<span>Какой-то текст</span>
-    	<span>Какой-то текст</span>
-    	<span>Какой-то текст</span>
-    </footer>
+
     <script type="text/javascript">
         var myemail=2;
         localStorage.setItem("code",myemail);

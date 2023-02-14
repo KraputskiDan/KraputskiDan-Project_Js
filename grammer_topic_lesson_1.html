@@ -8,8 +8,30 @@
     <title>Grammar Topic lesson 1</title>
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/3ab1128600.js" crossorigin="anonymous"></script>
+        <style>
+        @font-face {
+            font-family: Pompadur; /* Гарнитура шрифта */
+            src: url(font/font_1.ttf); /* Путь к файлу со шрифтом */
+        }
+        h1 {
+
+            font-size: 80px;
+            font-family: Pompadur, 'Comic Sans MS', cursive;
+        }
+       
+         h1 {
+            grid-column: 1;
+            text-shadow: #FC0 1px 0 10px;
+            margin: 0px;
+                margin-top:25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+  
+        
+  </style>
 </head>
-<body>
+<body >
     <header id="header">
         <h1 id="logo">
             <a href="index.html"></a>
@@ -30,7 +52,7 @@
         <div style="grid-area: b; grid-column: 2; margin: 30px 10px 15px 15px;"><a  href="./resources/lesson1.pdf" download="newfilename">Download the pdf</a>
                     <img class="pdf" no-repeat scroll left center transparent src="./img/pdf.png">
                 </div>
-        <section id="ls1_content_gt_1">
+        <section id="ls1_content_gt_1" style="font-size: 18px;">
         
             <div class="text_content_gt_1">
                  
@@ -225,12 +247,7 @@
         </div>
         </section>
     </main>
-    <footer id="footer">
-        <span>Create 2023</span>
-        <span>Какой-то текст</span>
-        <span>Какой-то текст</span>
-        <span>Какой-то текст</span>
-    </footer>
+
     
     <script type="text/javascript" src="js/main.js"></script>
 </body>

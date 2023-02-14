@@ -4,8 +4,8 @@ html {
     padding: 0;
     font-family: merriweather;
     font-size: 18px;
-    background: rgb(0,0,0);
-background: linear-gradient(0deg, rgba(0,0,0,0.901483273973652) 0%, rgba(255,255,255,1) 50%, rgba(0,0,0,0.9) 100%);
+    background: rgb(188,152,126);
+background: linear-gradient(0deg, rgba(188,152,126, 0.901483273973652) 0%, rgba(255,255,255,1) 50%, rgba(188,152,126,0.9) 100%);
 }
 
 body p, h1, time, span {
@@ -21,10 +21,10 @@ body {
 
 header {
 	display: grid;
-  	grid-template-columns: 20% auto;
+  	grid-template-columns: 10% auto;
   	grid-template-rows: auto;
   	align-self: center;
-  	background: rgb(235 235 235);
+  	background: rgb(188,152,126);
 }
 
 #logo {
@@ -33,8 +33,8 @@ header {
       background-size: cover;
       /*padding: 0px;*/
       margin: 10px 0 0 10%;
-      width: 60px;
-      height: 50px;
+      width: 78px;
+      height: 68px;
 
 }
 
@@ -45,7 +45,7 @@ header {
 
 nav ul{
 	display: grid;
-	grid-template-columns: 150px 150px 150px 150px 150px 150px;
+	grid-template-columns: auto auto auto auto auto auto;
 	grid-gap: 25px;
 }
 
@@ -83,7 +83,7 @@ main {
   	margin-top: 35px;
   	margin-bottom: 35px;
   	grid-gap: 6vw;
-  	background: rgb(235 235 235);
+  	background: rgb(188,152,126);
 }
 
 #content_main_page {
@@ -124,7 +124,7 @@ ul {
 #content_lesson {
 	grid-column: 1/ span 5;
 	grid-row: 1;
-	border: solid 2px;
+	/*border: solid 2px;*/
 	width: auto;
 	height: auto;
 	margin: 15px;
@@ -250,8 +250,10 @@ grid-area: c;
 #main_Game{
 	display: grid;
 	grid-template-areas: 
-	"a a a";	
-	grid-template-columns: 25% 750px 25%;
+	"a a a"	
+	"b b b";
+
+	grid-template-columns: auto auto;
     grid-gap: 1vw;
   	margin-top: 35px;
   	margin-bottom: 35px;
@@ -262,10 +264,10 @@ grid-area: c;
 	grid-area: a;
 	display: grid;
 	grid-template-areas:
-    "b c d"
-	"e f g"
-	"z z z"
-	"w w w";
+    "b c"
+    "d e"
+    "f g"
+    "z w";
    	grid-template-columns: auto;
    	padding: 3%;
  justify-content: space-between;
@@ -354,7 +356,7 @@ grid-area: c;
     "q t r"
    	"y h h"
    	"k k k";
-   	grid-template-columns: 10% 250px 250px;
+   	grid-template-columns: 10% 250px auto;
    	padding: 25px;
 }
 
@@ -537,7 +539,7 @@ grid-area: c;
 }
 
 #ls2_content_gt_1 .text_content_gt_3 div li:last-child {
-	font-size: 16px;
+	font-size: 18px;
 }
 
 #ls2_content_gt_1 .text_content_gt_4 {
@@ -631,7 +633,7 @@ grid-area: c;
 	"a c"
 	"a d"
 	"a e";
-	font-size: 16px;
+	font-size: 18px;
 }
 
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 {
@@ -701,7 +703,7 @@ grid-area: c;
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_3 .gt_4_block_2,
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_2 {
 	grid-area: b;
-	font-size: 16px;
+	font-size: 18px;
 	padding-top: 30px;
 }
 
@@ -709,7 +711,7 @@ grid-area: c;
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_3 .gt_4_block_3,
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_3 {
 	grid-area: c;
-	font-size: 16px;
+	font-size: 18px;
 	margin-top: -5px;
 	border-bottom: solid 1px;
 }
@@ -718,7 +720,7 @@ grid-area: c;
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_3 .gt_4_block_4,
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_4 {
 	grid-area: d;
-	font-size: 16px;
+	font-size: 18px;
 	padding-top: 30px;
 }
 
@@ -726,7 +728,7 @@ grid-area: c;
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_3 .gt_4_block_5,
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_5 {
 	grid-area: e;
-	font-size: 16px;
+	font-size: 18px;
 	margin-top: -5px;
 	border-bottom: solid 1px;
 }
@@ -734,27 +736,27 @@ grid-area: c;
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_2 .gt_4_block_6,
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_6 {
 	grid-area: f;
-	font-size: 16px;
+	font-size: 18px;
 	padding-top: 30px;
 }
 
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_2 .gt_4_block_7,
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_7 {
 	grid-area: g;
-	font-size: 16px;
+	font-size: 18px;
 	margin-top: -5px;
 	border-bottom: solid 1px;
 }
 
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_8 {
 	grid-area: r;
-	font-size: 16px;
+	font-size: 18px;
 	padding-top: 30px;
 }
 
 #ls2_content_gt_1 .text_content_gt_4 #gt_4_el_4 .gt_4_block_9 {
 	grid-area: h;
-	font-size: 16px;
+	font-size: 18px;
 	margin-top: -5px;
 	border-bottom: solid 1px;
 }
@@ -819,7 +821,7 @@ grid-area: c;
 #content_recipes_page #article_recipes .recipes_bloc_7 figcaption,
 #content_recipes_page #article_recipes .recipes_bloc_8 figcaption {
 	background-color: #80808042;
-    color: #fff;
+    color: #000;
     font: italic smaller sans-serif;
     padding: 3px;
 }
@@ -1030,7 +1032,7 @@ body {
 .braces {
 display: inline-block;
 position: relative;
-padding:1.4em 4.6em;
+padding:1.4em 0.6em;
 margin-bottom: 1em;
 }
 .braces::before,
@@ -1192,3 +1194,18 @@ input{
 
 	margin: 10px;
 }*/
+
+
+ @font-face {
+            font-family: Pompadur; /* Гарнитура шрифта */
+            src: url(font/font_1.ttf); /* Путь к файлу со шрифтом */
+        }
+     nav ul li a{
+            font-size: 55px;
+            font-weight: bold;
+            font-family: Pompadur;
+        }
+       
+       nav ul li   a{
+            text-shadow: #B87333 2px 0 10px;
+        }

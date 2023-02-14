@@ -11,7 +11,27 @@
 
         <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/game.css" />
-
+<style>
+        @font-face {
+            font-family: Pompadur; /* Гарнитура шрифта */
+            src: url(font/font_1.ttf); /* Путь к файлу со шрифтом */
+        }
+        h1 {
+            font-size: 105px;
+            font-family: Pompadur, 'Comic Sans MS', cursive;
+        }
+               h1 {
+            grid-column: 1;
+            text-shadow: #FC0 1px 0 10px;
+            /*margin: 0;*/
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #game ul li {
+          margin: 0px 0px 0px 8px;
+          padding: 10px;
+        }
+      </style>
 </head>
 <body>
     <header id="header">
@@ -30,18 +50,18 @@
         </nav>
 
     </header>
-    <main>
+    <main style="display: block;">
        
-     <h1> Играем в Wordle </h1>
-<div id="game-board">
-<div id="info-game">
+     <h1 style="margin:20px 0px 20px 0px; font-size: 56px;"> Играем в Wordle </h1>
+      <div id="game-board">
+      <div id="info-game">
 
-  <div id="countdown" class="countdown">
+  <div id="countdown" class="countdown" style="align-content: center; font-size: 40px;">
     <span class="minutes countdown-time"></span>
     <span>:</span>
     <span class="seconds countdown-time"></span>
   </div>
-  <div id="score">
+  <div style="margin:10px" id="score">
     <span id="CurentImage">100</span>
     <span>/</span>
   <span id="countLength">200</span></div>
@@ -49,18 +69,12 @@
     
   <div id="game">
     <img src="grid_0.png" width="500" height="500" id="image">
-     <ul id="wordblock"></ul> 
+     <ul style="margin: 20px;" id="wordblock"></ul> 
   </div>
 <div id="footer-game"></div>
 </div>
     </main>
-    <footer id="footer">
-    	<span>Create 2023</span>
-    	<span>Какой-то текст</span>
-    	<span>Какой-то текст</span>
-    	<span>Какой-то текст</span>
-    </footer>
-    
+
     <script type="text/javascript" src="js/main.js"></script>
 
 
