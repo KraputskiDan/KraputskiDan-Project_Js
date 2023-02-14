@@ -1,4 +1,4 @@
-li {
+main li {
     margin-top:8px;
     height:44px;
     padding-top:15px;
@@ -317,9 +317,30 @@ section ul {
     margin-top: 158px;
 }
 
+.countdown {
+    font-size: 36px;
+}
 
+#head{
+    font-size: 36px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
 
+#buttons button{
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.quiz_footer{
+    margin: 46px;
+    font-size: 24px;
 
+}
+
+div h1  {
+    font-size: 36px;
+}
+/*
 body, html
 {
     width: 100%;
@@ -329,9 +350,9 @@ body, html
     overflow: hidden;
     font-size: 16px;
     font-family: helvetica, arial;
-    background: #f9f9f9;
+    /*background: #f9f9f9;*/
     color: #111;
-}
+}*/
 
 .wrapper
 {
@@ -342,7 +363,7 @@ body, html
 
 .main
 {
-    display: table-cell;
+    /*display: table-cell;*/
     vertical-align: middle;
     text-align: center;
 }
