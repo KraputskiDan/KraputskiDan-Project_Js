@@ -264,7 +264,7 @@ grid-area: c;
 	"z z z"
 	"w w w";
    	grid-template-columns: auto;
-   	padding: 10%;
+   	padding: 3%;
  justify-content: space-between;
 }
 
