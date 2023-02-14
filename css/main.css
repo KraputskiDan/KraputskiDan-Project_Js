@@ -1,3 +1,8 @@
+ @font-face {
+            font-family: Pompadur; /* Гарнитура шрифта */
+            src: url(font/font_1.ttf); /* Путь к файлу со шрифтом */
+        }
+
 html {
 	height: 100%;
     margin: 0;
@@ -5,6 +10,7 @@ html {
     font-family: merriweather;
     font-size: 18px;
     background: rgb(188,152,126);
+    /*color: #e8dbd2;*/
 background: linear-gradient(0deg, rgba(188,152,126, 0.901483273973652) 0%, rgba(255,255,255,1) 50%, rgba(188,152,126,0.9) 100%);
 }
 
@@ -27,14 +33,39 @@ header {
   	background: rgb(188,152,126);
 }
 
+     nav ul li a{
+            font-size: 44px;
+            font-weight: bold;
+            font-family: Pompadur,'Comic Sans MS', cursive;
+        }
+       
+       nav ul li   a{
+            text-shadow: #B87333 3px 0 10px;
+        }
+
+
+       main h1{
+            font-size: 105px;           
+          font-family: Pompadur, 'Comic Sans MS', cursive;
+        }
+       
+        main h1{	
+            text-shadow: #B87333 3px 0 10px;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+  
+
+
 #logo {
 	background-image: url("../img/Logo.png")  	;
-	 background-repeat: no-repeat;
+	 background-repeat: round;
       background-size: cover;
       /*padding: 0px;*/
       margin: 10px 0 0 10%;
-      width: 78px;
-      height: 68px;
+      width: 84px;
+      height: 71px;
 
 }
 
@@ -59,6 +90,16 @@ nav ul li a{
 	text-decoration: none;
 }
 
+     nav ul li a{
+            font-size: 44px;
+            font-weight: bold;
+            font-family: Pompadur;
+        }
+       
+       nav ul li   a{
+            text-shadow: #B87333 2px 0 10px;
+        }
+
 li > a {
 	display: inline-block;
 	padding: 10px;
@@ -75,13 +116,13 @@ li > a{
 }
 
 li > i {
-	font-size: 15px;
+	font-size: 32px;
 }
 
 main {
 	display: grid;
   	margin-top: 35px;
-  	margin-bottom: 35px;
+  	/*margin-bottom: 35px;*/
   	grid-gap: 6vw;
   	background: rgb(188,152,126);
 }
@@ -107,7 +148,7 @@ footer {
     min-height: 50px;
     background: PapayaWhip;
     grid-gap: 1vw;
-    background: rgb(235 235 235);
+    background: rgb(188,152,126);
 }
 
 ul {
@@ -139,7 +180,7 @@ ul {
 #ul_lesson li {
 	display: grid;
 	grid-template-columns: auto 135px;
-	border: solid 2px;
+	/*border: solid 2px;*/
 	padding: 10px;
 	margin: 10px;
 }
@@ -182,7 +223,7 @@ ul {
 .text_content_gt_1 {
 	grid-area: a;
 	border: solid 2px;
-	border-color: #39cde5;
+	border-color: #f3ede9;
 	border-radius: 20px;
 	padding: 15px 20px;
 }
@@ -250,26 +291,30 @@ grid-area: c;
 #main_Game{
 	display: grid;
 	grid-template-areas: 
-	"a a a"	
-	"b b b";
+	"a a a a"	
+	"b b b b";
 
 	grid-template-columns: auto auto;
     grid-gap: 1vw;
   	margin-top: 35px;
-  	margin-bottom: 35px;
-  	background: rgb(235 235 235);
+  	/*margin-bottom: 35px;*/
+  	background: rgb(188,152,126);
 }
 
 .text_content_gt_3_Recipes {
 	grid-area: a;
 	display: grid;
 	grid-template-areas:
-    "b c"
+	"b b c c" 
+	"d d e e"
+	"f f g g"
+	"z z w w" ;
+    /*"b c"
     "d e"
     "f g"
     "z w";
-   	grid-template-columns: auto;
-   	padding: 3%;
+   	*/grid-template-columns: auto;
+   	padding: 0% 10% 0% 10%;
  justify-content: space-between;
 }
 
@@ -1169,7 +1214,7 @@ input{
 #test_section_1, #test_section_2, #test_section_3, #test_section_4, #test_section_5, #test_section_6 {
 	width: 245px;
 	height: 110px;
-	background: rgb(235 235 235);
+	background: rgb(188,152,126);
 	z-index: 0;
 	position: absolute;
 }
@@ -1196,16 +1241,30 @@ input{
 }*/
 
 
- @font-face {
-            font-family: Pompadur; /* Гарнитура шрифта */
-            src: url(font/font_1.ttf); /* Путь к файлу со шрифтом */
+
+#vocabulary_page {
+            display: grid;
+            grid-template-columns: 5% auto 5%;
         }
-     nav ul li a{
-            font-size: 55px;
-            font-weight: bold;
-            font-family: Pompadur;
+        #vocabulary_letter {
+            display: grid;
+            grid-column: 2;
+            grid-template-columns: 50% 50%;
         }
-       
-       nav ul li   a{
-            text-shadow: #B87333 2px 0 10px;
+        #vocabulary_letter section {
+            display: grid;
+            grid-template-columns: 125px 605px;
+        }
+        #vocabulary_letter section h1 {
+            grid-column: 1;
+            text-shadow: #B87333 3px 0 10px;
+            margin: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #vocabulary_letter section ul {
+            grid-column: 2;
+        }
+        #vocabulary_letter section ul li {
+            margin-bottom: 5px;
         }
