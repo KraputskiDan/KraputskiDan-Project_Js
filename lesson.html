@@ -15,6 +15,27 @@
         }
 
     </style>
+    <script type="text/javascript">
+                        if(localStorage.getItem('scoreLesson1') == null)
+                {
+                  localStorage.setItem('scoreLesson1', 0);
+                }
+                if(localStorage.getItem('scoreLesson2') == null)
+                {
+                  localStorage.setItem('scoreLesson2', 0);
+                }
+                if(localStorage.getItem('scoreLesson3') == null)
+                {
+                  localStorage.setItem('scoreLesson3', 0);
+                }
+            document.addEventListener("DOMContentLoaded", () => {
+                   let scores = document.querySelectorAll(".completion_first_lesson");
+                   scores[0].innerHTML = localStorage.getItem('scoreLesson1')+"%";
+                   scores[1].innerHTML = localStorage.getItem('scoreLesson2')+"%";
+                   scores[2].innerHTML = localStorage.getItem('scoreLesson3')+"%";
+              });
+          
+    </script>
 </head>
 <body>
     <header id="header">
@@ -38,15 +59,15 @@
             <ul id="ul_lesson" style="font-size: 32px; font-weight: bold; border: none;">
                 <li >
                     <a href="lesson_1.html">1. Nouns in the Genitive Case.</a>
-                    <div id="completion_first_lesson">0%</div>
+                    <div id="completion_first_lesson" class="completion_first_lesson">0%</div>
                 </li>
                 <li>
                     <a href="lesson_2.html">2. Genitive Case Plural. Quantity.</a>
-                    <div id="completion_first_lesson">0%</div>
+                    <div id="completion_first_lesson" class="completion_first_lesson">0%</div>
                 </li>
                 <li>
                     <a href="lesson_3.html">3. Dialogues and Text</a>
-                    <div id="completion_first_lesson">0%</div>
+                    <div id="completion_first_lesson" class="completion_first_lesson">0%</div>
                 </li>
             </ul>
         </section>

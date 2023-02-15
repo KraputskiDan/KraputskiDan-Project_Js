@@ -19,6 +19,9 @@
   document.addEventListener("DOMContentLoaded", () => {
       task1_3();
       task1_7();
+
+                localStorage.setItem('scoreLesson1', 0);
+
   });
 </script>
 </head>
@@ -567,7 +570,8 @@
         </form>
         <button type="button" id="button_result_t_1_7" onclick="result_t_1_7()">Click me</button>
       </div>
-      <div class="text_content_gt_12"></div>
+       <button  class="animated-button" onclick="resultLesson1()">Result Lesson</button>
+      <!-- <div class="text_content_gt_12"></div> -->
     </section>
   </main>
 

@@ -16,6 +16,21 @@ let taskResult3_9;
 let taskResult3_10;
 let taskResult3_11;
 
+if(localStorage.getItem('scoreLesson1') == null)
+{
+  localStorage.setItem('scoreLesson1', 0);
+}
+if(localStorage.getItem('scoreLesson2') == null)
+{
+  localStorage.setItem('scoreLesson2', 0);
+}
+if(localStorage.getItem('scoreLesson3') == null)
+{
+  localStorage.setItem('scoreLesson3', 0);
+}
+
+
+
 function task1_3(){
     let radioButton = document.querySelectorAll("input[name='test1_3']");
     
@@ -123,6 +138,7 @@ function result_t_1_3() {
       if(el.style.background == 'red')
         if(Number(el.getAttribute("value")) === rightAnswerT1_3[0].answer)
           el.style.background = 'green' 
+
     })
     buttonsSection_2.forEach(el => {
       if(el.style.background == 'red')
@@ -506,30 +522,36 @@ function task3_11() {
 
     if(radioButtonChange1[1].checked)
     {
+      radioButtonChange1[1].style.backgroundColor = 'green' 
       result += 1;
     }
 
     if(radioButtonChange2[0].checked)
     {
+          radioButtonChange2[0].style.backgroundColor = 'green' 
       result += 1;
     }
 
     if(radioButtonChange3[1].checked)
     {
+        radioButtonChange3[1].style.backgroundColor = 'green' 
       result += 1;
     }
 
     if(radioButtonChange4[0].checked)
     {
+        radioButtonChange4[0].style.backgroundColor = 'green' 
       result += 1;
     }
 
     if(radioButtonChange5[1].checked)
     {
+        radioButtonChange5[1].style.backgroundColor = 'green' 
       result += 1;
     }
 
     console.log(result)
+    return result;
 }
 
 
@@ -1024,4 +1046,61 @@ console.log(task, right_task)
 
   
 
-  
+    function resultLesson1(){
+      let score =0;
+      let scoreMax =35;
+
+        score += document.querySelectorAll(".successfulTask").length;    
+
+    document.querySelectorAll("#testInfo1_3 button").forEach(n => {
+      if(n.style.background == 'green')
+        score += 1;
+    })
+        let result = score/scoreMax*100;
+        result =result.toFixed(2);
+      localStorage.setItem('scoreLesson1', result)
+      console.log(result);
+      console.log('score',score);
+    }
+
+
+
+
+    function resultLesson2(){
+      let score =0;
+      let scoreMax =42;
+
+        score += document.querySelectorAll(".successfulTask").length;    
+
+    document.querySelectorAll("#testInfo2_5 button").forEach(n => {
+      if(n.style.background == 'green')
+        score += 1;
+    })
+        let result = score/scoreMax*100;
+        result =result.toFixed(2);
+      localStorage.setItem('scoreLesson2', result)
+      console.log(result);
+      console.log('score',score);
+    }
+
+
+
+
+    function resultLesson3(){
+      let score =0;
+      let scoreMax =35;
+
+        score += document.querySelectorAll(".successfulTask").length;    
+        score+= task3_11();
+
+ 
+        let result = score/scoreMax*100;
+        result =result.toFixed(2);
+      localStorage.setItem('scoreLesson3', result)
+      console.log(result);
+      console.log('score',score);
+    }
+
+
+
+  console.log( localStorage.getItem('scoreLesson1'), localStorage.getItem('scoreLesson2'),localStorage.getItem('scoreLesson3')  );
