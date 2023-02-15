@@ -143,99 +143,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 	    return 0;
     }
 /*
-	function set_check(task, isRight){
-		task = $(task);
-		var url = 'https://'+location.host+'/answer/';
-		var tid = parseInt($('.homework').attr('id').split('-')[1] || 0) * 100 + parseInt(task.attr('id').split('-')[1]);
-		// Reset
-		if('undefined' == typeof isRight){
-			if($(task).hasClass('correct')) $.post(url, {id_exercise: tid, status: 0}, function(){}, 'json'); // without last 2 arguments fire exeption in Opera (jQuery try to evaluate response as script)
-			task.addClass('learning').removeClass('wrong').removeClass('correct');
-		}
-		// Right
-		else if(isRight){
-			if(!$(task).hasClass('correct')) $.post(url, {id_exercise: tid, status: 1}, function(){}, 'json');// without last 2 arguments fire exeption in Opera (jQuery try to evaluate response as script)
-			task.removeClass('learning').removeClass('wrong').addClass('correct');
-
-
-			if($(task).find("ol").html() != null) var teg = "ol";
-			else teg = "ul";
-
-			$(task).find(teg).children().each(function(){
-			//var parse_obj = $(this);
-
-				$(this).children('.if_correct').each(function(){
-					$(this).addClass("editing");
-					//alert($(this).parents("li").attr("class"));
-					if(!$(this).parents("li").hasClass('noifl'))
-					{
-						var clone_parse_obj = $(this).parents("li").clone();
-
-						clone_parse_obj.children(".if_correct").css("display", "inline");
-						clone_parse_obj.children(".if_learning").remove();
-
-						var margin_right = 0;
-						if($(this).parents('.task').hasClass('typseven')) margin_right = -4;
-
-						var letters = string_parse(clone_parse_obj, ".if_correct", get_task_class($(this).parent()), margin_right, 2);
-						var text = $(this).text();
-						var sub = text.substr(1, text.length-1);
-
-						if(letters[0] == "upper")
-							var first_char = text.charAt(0).toUpperCase();
-						else
-							var first_char = text.charAt(0).toLowerCase();
-
-						$(this).text(first_char + sub).css("margin-right", letters[1] + "px");
-						if(teg == "ul") $(this).css("margin-left", "3px");
-					}
-					$(this).removeClass("editing");
-				});
-			});
-		}
-		// Wrong
-		else{
-			if($(task).hasClass('correct')) $.post(url, {id_exercise: tid, status: 0}, function(){}, 'json');// without last 2 arguments fire exeption in Opera (jQuery try to evaluate response as script)
-			task.removeClass('learning').addClass('wrong').removeClass('correct');
-
-			//Подсветка не правильных
-			if(task.hasClass('typsecond'))
-				task.find('._vrt_answer_hash').each(function(){
-					var answer = $(this).parent().children('.draggable');
-					var hash = $(this).html();
-					if(answer.html() != null && hash != null)
-					{
-						if(hash != trim(answer.html().toLowerCase(), ' '))
-							answer.addClass("wrong_answer_red");
-					}
-				});
-			if(task.hasClass('typsix'))
-				task.find('.bgal').children("ul").children("li").each(function(){
-					var answer = $(this).children('span');
-					var hash = $(this).attr("answer_hash");
-					if(answer.text() != null && hash != null)
-					{
-						if(trim(answer.text().toLowerCase(), ' ') != hash)
-							answer.addClass("wrong_answer_red");
-					}
-				});
-			if(task.hasClass('typeight'))
-				task.find('.sort').each(function(){
-					var answer_string = $(this).children('._vrt_answer_hash').text();
-					if(answer_string != null)
-						$(this).children('ul').children().each(function(){
-							var user_answer = $(this).children('.draggable');
-							if(user_answer.text() != null)
-								if(!(answer_string.toLowerCase().indexOf(user_answer.text().toLowerCase()) + 1))
-									user_answer.addClass('wrong_answer_red');
-						});
-				});
-
-		}
-
-
-		lesson_checker.draw_lesson_info();
-	}
+	
 */
 	function check_answers(task, hash){
 
@@ -617,7 +525,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 			$('.task'+typeClass).each(function(n, task){
 				$(task).data('check_answers', function(){
-					check_task(task);
+					//check_task(task);
 				});
 				if($(task).hasClass('correct')){
 					$('.draggable',task).draggable({disabled: true});
@@ -629,7 +537,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset
 		};
 	});
@@ -675,20 +583,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
             data.draggable._mouseDown(e);
             set_check(task);
         }
-        function check_task(task){
-            var answers = $('li', task);
-            if($('.r-star-shape:visible',task).length == 0){
-                var hash="";
-                for (var i = 1; i < answers.length; i++) {
-                    hash += $($(answers[i]).find('span')[1]).html() + '|';
-                }
-                check_answers(task, hash);
-            } else {
-                for (var j = 2; j < answers.length; j++) {
-                    if ($('span', answers[j - 1]).hasClass('answered')) $(answers[j]).show();
-                }
-            }
-        }
+        
         function drop_drop(ev, info){
             var text = transform_for_pasting(info.draggable.find('p').first().html());
             $(ev.target)
@@ -771,7 +666,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
         return lesson = {
             init: init,
-            check_task: check_task,
+            
             reset: reset
         };
     });
@@ -815,16 +710,6 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 			data.draggable._mouseDown(e);
 			set_check(task);
 		}
-        function check_task(task){
-            var answered = $('.droppable.answered',task);
-            if($('.droppable',task).length == answered.length){
-                var hash="";
-                for(var i=0; i<answered.length; i++){
-                    hash+=answered[i].innerHTML+'|';
-                }
-                check_answers(task, hash);
-            }
-        }
 
 		function drop_drop(ev, info){
 
@@ -924,7 +809,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset
 		};
 	});
@@ -1003,7 +888,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
         return lesson = {
             init: init,
-            check_task: check_task,
+            
             reset: reset
         };
     });
@@ -1028,21 +913,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
             }
             tabcontrol[0].setTab(1);
         }
-        function check_task(task){
-            var hash='';
-            var tab_count = $('tabcontrol>ul:first>li',task).length || 1;
-            var isFullAdd, tab_answered_count=0;
-            for(var i=1; i<=tab_count; i++){
-                isFullAdd = 0;
-                $('tabcontrol .tab-'+i+' .bordersmall.chosen p',task).each(function(n, el){
-                    hash += $(el).html()+'|';
-                    isFullAdd = 1;
-                });
-                tab_answered_count += isFullAdd;
-            }
-            var isFull = (tab_count==tab_answered_count);
-            if(isFull) check_answers(task, hash);
-        }
+  
 
         //*** Events handling ***
         function bordersmall_click_handler(e){
@@ -1089,7 +960,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
         return lesson = {
             init: init,
-            check_task: check_task,
+            
             reset: reset
         };
     });
@@ -1106,14 +977,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
             $('.chosen',task).removeClass('chosen');
             $('tabcontrol',task)[0].setTab(1);
         }
-        function check_task(task){
-            var hash='', isFull=true;
-            $('.answerable',task).each(function(n, el){
-                isFull = isFull && $(el).hasClass('answered');
-                hash += el.innerHTML + '|';
-            });
-            if(isFull) check_answers(task, hash);
-        }
+
         function draw_answer(target){
             var tabcontrol = $(target).parents('tabcontrol');
             var numb = tabcontrol[0].activeTab();
@@ -1145,7 +1009,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
         return lesson = {
             init: init,
-            check_task: check_task,
+            
             reset: reset
         };
     });
@@ -1161,25 +1025,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
             $('.answerable',task).html(empty).removeClass('answered red');
             $('.chosen:not(.example)',task).removeClass('chosen');
         }
-        function check_task(task){
-            var hash='', isFull=($('.ctask ul',task).length == $('.chosen',task).length);
-            $('.chosen',task).each(function(n, el){
-                hash += $(el).text() + '|';
-                if($(el).parent().find('.answered').html() != null)
-                {
-	                var letters = string_parse($(el).parent().clone().remove('.bordersmall'), ".answered", get_task_class($(el)), 0, 1);
-					var text = $(el).parent().find('.answered').html();//.replace(/\s+/, '');
-					text = trim(text, " ");
-					var sub = text.substr(1, text.length-1);
-					if(letters[0] == "upper")
-						var first_char = text.charAt(0).toUpperCase();
-					else
-						var first_char = text.charAt(0).toLowerCase();
-					$(el).parent().find('.answered').text(first_char + sub).css("margin-right", letters[1] + "px");
-				}
-            });
-            if(isFull) check_answers(task, hash);
-        }
+
         function draw_answer(target){
             var answer = $(target).text().replace(/\s+/, '');
             $(target).parent().find('.answerable').html(answer).addClass('answered');
@@ -1218,7 +1064,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
         return lesson = {
             init: init,
-            check_task: check_task,
+            
             reset: reset
         };
     });
@@ -1260,7 +1106,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset
 		};
     });
@@ -1286,15 +1132,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 			});
 			$('.gallery ul>li',task).removeClass('answered');
 		}
-		function check_task(task){
-			if($('.gallery ul>li',task).length != $('.gallery ul>li.answered',task).length) return;
-			var arr=[];
-			$('.answered',task).each(function(n, el){
-				arr[$(el).data('img_number')] = $('span', el).html();
-			});
-			var hash = arr.join('|')+'|';
-			check_answers(task, hash);
-		}
+	
 
 		/*function click_gallery(value, count)
 		{
@@ -1390,7 +1228,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset
 		};
     });
@@ -1407,28 +1245,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 			dragndrop.resetTask(task);
 		}
 
-		function check_task(task){
-			if($('.words .draggable',task).length !== 0) return;
-
-			var hash="";
-			var drops = $('.sort.droppable',task);
-			for(var i=0; i<drops.length; i++){
-				var drags = $('.draggable',drops[i]);
-				var arr=[];
-				for(var j=0; j<drags.length; j++){
-					arr.push(drags[j].innerHTML);
-				}
-				arr.sort();
-				hash += arr.join('|') + '#';
-			}
-
-			console.log(hash);
-			var isCorrect = check_answers($(task), hash);
-			if(isCorrect){
-				$('.draggable',task).draggable({disabled: true});
-			}
-		}
-
+		
 		function append_to_other_parent(moving_element, new_parent){
 			var old_parent = $(moving_element).parent();
 			var li = document.createElement('li');
@@ -1464,7 +1281,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset
 		};
     });
@@ -1507,7 +1324,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset
 		};
     });
@@ -1530,51 +1347,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
                 check_inputs(task);
             }
         }
-        function check_inputs(task){
-            //*** Reset last state (cancel timer and  ***
-
-            var timer = $(task).data('check_answers_timer');
-            clearTimeout(timer);
-            set_check(task);
-
-            //*** Check correct ***
-            var isRight=false;
-            var count = 0;
-            var check = 0;
-            $('input',task).each(function(n,el){
-            	var answers = 0;
-            	count++;
-            	if($(el).attr('answer').length != 0)
-					var answers = $(el).attr('answer').toLowerCase().split('|');//replace(/[ \n\t\s+]/g, '').split('|');
-
-				var value = trim($(el).val(), " ");
-
-				if((in_array(value.toLowerCase(), answers) && value.length != 0) || (answers == 0 && value.length == 0))
-				{
-					if($(el).parents('.task').hasClass('typnine'))
-						$(el).prev().prev('.if_correct').html(value);
-					else if($(el).parents('.task').hasClass('typseven'))
-						$(el).prev('.if_correct').html(value);
-					else
-						$(el).next('.if_correct').html(value);
-					check++
-				}
-            });
-            if(check == count) isRight = true;
-
-            if(isRight){
-                set_check(task, true);
-                VirtualKeyBoardGUI.hide();
-            }else{
-                $(task).data('check_answers_timer', setTimeout(function(){
-                    set_check(task, false);
-                }, 1200));
-            }
-            return isRight;
-
-            //*** Display result ***
-
-        }
+    
         function on_change(e){
             var task = $(e.target).parents('.task');
             set_check(task);
@@ -1589,7 +1362,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
         return lesson = {
             init: init,
-            check_task: check_task,
+            
             reset: reset
         };
     });
@@ -1762,7 +1535,7 @@ var LessonsCustomControl = (function LessonsCustomControl_constructor(){
 
 		return lesson = {
 			init: init,
-            check_task: check_task,
+            
             reset: reset,
 			focus_prev: focus_prev,
 			focus_next: focus_next
@@ -1827,7 +1600,7 @@ $(function lessons_autorun(){
 	LessonsCustomControl.init();
 
 	// Init virtual keyboard
-	VirtualKeyBoardGUI = VirtualKeyBoardGUI('.barkeybord:first', '.small-keyboard');
+	//VirtualKeyBoardGUI = VirtualKeyBoardGUI('.barkeybord:first', '.small-keyboard');
 	//VirtualKeyBoardGUI.hide();
 
 	// Topbar position
