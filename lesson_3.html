@@ -94,7 +94,9 @@
         <p>- Скажи, что без кофеина есть только <span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span>, в пакетиках.</p>
         <p>- А в кофе-машине?</p>
         <p>- Нет.</p>
-        <button class="animated-button" onclick="task3_1()">Result</button>
+        <button class="animated-button" onclick="task3_1()" id="task3_1Button">Result</button>
+
+      
           </div>
 
           <div class="textalign droppable droppable_default if_learning ui-droppable " style='grid-area: a;'>
@@ -171,7 +173,9 @@
             <p>- Да, но теперь надо говорить "<span class="droppable empty ui-droppable"><span class="if_empty">...........</span></span>".</p>
             <p>- Хорошо.</p>
 
-<button class="animated-button" onclick="task3_2()">Result</button>
+<button class="animated-button" onclick="task3_2()" id="task3_2Button">Result</button>
+
+
 
           </div>
 
@@ -205,7 +209,7 @@
           </ul>
         </div>
 
-        <div id="task1_5">
+        <div id="task3_3">
         <figure class="ls1_figure_1">
           <img src="img/lesson3-3.jpg">
           <audio controls src="audio/Lesson3-3.mpeg"></audio>
@@ -247,7 +251,8 @@
 
 
         </div>
-        <button class="animated-button" onclick="task1_5()">Result</button>
+        <button class="animated-button" onclick="task3_3()" id="task3_3Button">Result</button>
+        
       </div>
 
 
@@ -312,7 +317,9 @@
           
 
         </div>
-        <button class="animated-button" onclick="task3_4()">Result</button>
+        <button class="animated-button" onclick="task3_4()" id="task3_4Button">Result</button>
+
+       
 
       </div>
       <div class="text_content_gt_10">
@@ -362,7 +369,9 @@
           <p>Что лежит в морозильной камере?  <input type="text" size="5" answer="Замороженная рыба" class="if_learning"><span class="if_correct">Замороженная рыба</span> </p>
           <p>Как готовят замороженную рыбу?  <input type="text" size="5" answer="Размораживают в воде" class="if_learning"><span class="if_correct">Размораживают в воде</span> </p>
 
-        <button class="animated-button" onclick="task3_5()">Result</button>
+        <button class="animated-button" onclick="task3_5()" id="task3_5Button">Result</button>
+
+      
 
         </div>
       </div>
@@ -442,7 +451,8 @@
 
  
 
-        <button class="animated-button" onclick="task3_6()">Result</button>
+        <button class="animated-button" onclick="task3_6()" id="task3_6Button" >Result</button>
+            
 
         </div>
       </div>
@@ -499,26 +509,26 @@
 
         <form id="test1_3" action="#" style="display: grid; grid-auto-columns: auto; font-weight: bold;">
           <div>
-            <label for="contactChoice1">1. Горбушка – это</label><br>
-            <label for="contactChoice1">мягкая часть хлеба</label><input type="radio" id="testChoise1" name="test3_7_1" value="0"><br>
-            <label for="contactChoice1">края хлеба, крайний кусочек</label><input type="radio" id="testChoise1" name="test3_7_1" value="1">
+            <label for="contactChoice7">1. Горбушка – это</label><br>
+            <label for="contactChoice7">мягкая часть хлеба</label><input type="radio" id="testChoise1" name="test3_7_1" value="0"><br>
+            <label for="contactChoice7">края хлеба, крайний кусочек</label><input type="radio" id="testChoise1" name="test3_7_1" value="1">
           </div>
           <div>
-            <label for="contactChoice2">2. Хлебопекарь – это</label><br>
-            <label for="contactChoice2">печёт очень вкусный хлеб и другую вкусную выпечку</label><input type="radio" id="testChoise2" name="test3_7_2" value="0"><br>
-            <label for="contactChoice2">человек, который добавляет хлеб во все блюда</label><input type="radio" id="testChoise2" name="test3_7_2" value="1">
+            <label for="contactChoice7">2. Хлебопекарь – это</label><br>
+            <label for="contactChoice7">печёт очень вкусный хлеб и другую вкусную выпечку</label><input type="radio" id="testChoise2" name="test3_7_2" value="0"><br>
+            <label for="contactChoice7">человек, который добавляет хлеб во все блюда</label><input type="radio" id="testChoise2" name="test3_7_2" value="1">
           </div>
           <div>
-            <label for="contactChoice1">3. Выпечка – это</label><br>
-            <label for="contactChoice1">сладкие булочки из разного теста</label><input type="radio" id="testChoise3" name="test3_7_3" value="0"><br>
-            <label for="contactChoice1">соленый хлеб, с семечками</label><input type="radio" id="testChoise3" name="test3_7_3" value="1">
+            <label for="contactChoice7">3. Выпечка – это</label><br>
+            <label for="contactChoice7">сладкие булочки из разного теста</label><input type="radio" id="testChoise3" name="test3_7_3" value="0"><br>
+            <label for="contactChoice7">соленый хлеб, с семечками</label><input type="radio" id="testChoise3" name="test3_7_3" value="1">
           </div>
           <div>
-            <label for="contactChoice1">4. Повар-кондитер делает</label><br>
-            <label for="contactChoice1">пирожные</label><input type="radio" id="testChoise4" name="test3_7_4" value="0"><br>
-            <label for="contactChoice1">хлеб</label><input type="radio" id="testChoise4" name="test3_7_4" value="1">
+            <label for="contactChoice7">4. Повар-кондитер делает</label><br>
+            <label for="contactChoice7">пирожные</label><input type="radio" id="testChoise4" name="test3_7_4" value="0"><br>
+            <label for="contactChoice7">хлеб</label><input type="radio" id="testChoise4" name="test3_7_4" value="1">
           </div>
-          <button class="animated-button"type="button" onclick="task3_7()" style="width: 130px;">Result</button>
+          <button class="animated-button"type="button" id="buttonTask3_7" onclick="task3_7()" style="width: 130px;">Result</button>
         </form>
 
 
@@ -580,61 +590,61 @@
         </div>
         <form id="test1_3" action="#" style="display: grid; grid-auto-columns: auto; width: 115%; font-weight: bold;">
           <div>
-            <label for="contactChoice1">1. Для приготовления пельменей нужно вскипятить воду.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise1" name="test3_8_1" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise1" name="test3_8_1" value="1">
+            <label for="contactChoice8">1. Для приготовления пельменей нужно вскипятить воду.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise1" name="test3_8_1" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise1" name="test3_8_1" value="1">
           </div>
           <div>
-            <label for="contactChoice2">2. В воду добавляем немного соли и сахар.</label><br>
-            <label for="contactChoice2">Да</label><input type="radio" id="testChoise2" name="test3_8_2" value="0"><br>
-            <label for="contactChoice2">Нет</label><input type="radio" id="testChoise2" name="test3_8_2" value="1">
+            <label for="contactChoice8">2. В воду добавляем немного соли и сахар.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise2" name="test3_8_2" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise2" name="test3_8_2" value="1">
           </div>
           <div>
-            <label for="contactChoice1">3. Пельмени – это китайское национальное блюдо.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise3" name="test3_8_3" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise3" name="test3_8_3" value="1">
+            <label for="contactChoice8">3. Пельмени – это китайское национальное блюдо.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise3" name="test3_8_3" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise3" name="test3_8_3" value="1">
           </div>
           <div>
-            <label for="contactChoice1">4. У многих народов есть похожее блюдо: и в Китае, и в Казахстане, и в Прибалтике.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise4" name="test3_8_4" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise4" name="test3_8_4" value="1">
+            <label for="contactChoice8">4. У многих народов есть похожее блюдо: и в Китае, и в Казахстане, и в Прибалтике.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise4" name="test3_8_4" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise4" name="test3_8_4" value="1">
           </div>
           <div>
-            <label for="contactChoice1">5. Пельмени в России небольшие, их обязательно замораживают и хранят на морозе.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise5" name="test3_8_5" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise5" name="test3_8_5" value="1">
+            <label for="contactChoice8">5. Пельмени в России небольшие, их обязательно замораживают и хранят на морозе.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise5" name="test3_8_5" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise5" name="test3_8_5" value="1">
           </div>
           <div>
-            <label for="contactChoice1">6. В России в вареники кладут мясо, смешивают свинину и говядину, а в пельмени – и сыр, и овощи, и картошку, картошку и грибы, творог и ягоды.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_8_6" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_6" value="1">
+            <label for="contactChoice8">6. В России в вареники кладут мясо, смешивают свинину и говядину, а в пельмени – и сыр, и овощи, и картошку, картошку и грибы, творог и ягоды.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise6" name="test3_8_6" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_6" value="1">
           </div>
           <div>
-            <label for="contactChoice1">7. И пельмени, и вареники едят горячими.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_8_7" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_7" value="1">
+            <label for="contactChoice8">7. И пельмени, и вареники едят горячими.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise6" name="test3_8_7" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_7" value="1">
           </div>
           <div>
-            <label for="contactChoice1">8. Пельмени или вареники должны всплыть в воде, подняться наверх. Это значит, что они готовы.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_8_8" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_8" value="1">
+            <label for="contactChoice8">8. Пельмени или вареники должны всплыть в воде, подняться наверх. Это значит, что они готовы.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise6" name="test3_8_8" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_8" value="1">
           </div>
           <div>
-            <label for="contactChoice1">9. В конце варки надо добавить горошки чёрного перца и лаврушку, паприку и хмели-сунели.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_8_9" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_9" value="1">
+            <label for="contactChoice8">9. В конце варки надо добавить горошки чёрного перца и лаврушку, паприку и хмели-сунели.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise6" name="test3_8_9" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_9" value="1">
           </div>
            <div>
-            <label for="contactChoice1">10. По-русски пельмени подают со сметаной и уксусом.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_8_10" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_10" value="1">
+            <label for="contactChoice8">10. По-русски пельмени подают со сметаной и уксусом.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise6" name="test3_8_10" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_10" value="1">
           </div>
            <div>
-            <label for="contactChoice1">11. Русская традиция – многие продукты называть ласково: водочка, колбаска, сырок, картошечка.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_8_11" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_11" value="1">
+            <label for="contactChoice8">11. Русская традиция – многие продукты называть ласково: водочка, колбаска, сырок, картошечка.</label><br>
+            <label for="contactChoice8">Да</label><input type="radio" id="testChoise6" name="test3_8_11" value="0"><br>
+            <label for="contactChoice8">Нет</label><input type="radio" id="testChoise6_2" name="test3_8_11" value="1">
           </div>
-          <button class="animated-button"type="button" onclick="task3_8()" style="width: 130px;">Result</button>
+          <button class="animated-button"type="button" id="buttonTask3_8" onclick="task3_8()" style="width: 130px;">Result</button>
         </form>
       </div>
 
@@ -688,7 +698,8 @@
           <p>Разминаем или протираем картошку через сито <input type="text" size="1" answer="4" class="if_learning"><span class="if_correct">4</span> </p>
             
 
-        <button class="animated-button" onclick="task3_9()">Result</button>
+        <button class="animated-button" onclick="task3_9()" id="task3_9Button">Result</button>
+        
 
         </div>
       </div>
@@ -730,36 +741,36 @@
         </div>
         <form id="test1_3" action="#" style="display: grid; grid-auto-columns: auto; font-weight:bold;">
           <div>
-            <label for="contactChoice1">1. Чтобы мясо не подгорало, нужно чуть-чуть добавить воды в сковороду.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise1" name="test3_10_1" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise1" name="test3_10_1" value="1">
+            <label for="contactChoice10">1. Чтобы мясо не подгорало, нужно чуть-чуть добавить воды в сковороду.</label><br>
+            <label for="contactChoice10">Да</label><input type="radio" id="testChoise1" name="test3_10_1" value="0"><br>
+            <label for="contactChoice10">Нет</label><input type="radio" id="testChoise1" name="test3_10_1" value="1">
           </div>
           <div>
-            <label for="contactChoice2">2. Для того, чтобы сохранить сок, мясо обжаривается на слабом огне.</label><br>
-            <label for="contactChoice2">Да</label><input type="radio" id="testChoise2" name="test3_10_2" value="0"><br>
-            <label for="contactChoice2">Нет</label><input type="radio" id="testChoise2" name="test3_10_2" value="1">
+            <label for="contactChoice10">2. Для того, чтобы сохранить сок, мясо обжаривается на слабом огне.</label><br>
+            <label for="contactChoice10">Да</label><input type="radio" id="testChoise2" name="test3_10_2" value="0"><br>
+            <label for="contactChoice10">Нет</label><input type="radio" id="testChoise2" name="test3_10_2" value="1">
           </div>
           <div>
-            <label for="contactChoice1">3. Свинину жарят только до полуготовности.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise3" name="test3_10_3" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise3" name="test3_10_3" value="1">
+            <label for="contactChoice10">3. Свинину жарят только до полуготовности.</label><br>
+            <label for="contactChoice10">Да</label><input type="radio" id="testChoise3" name="test3_10_3" value="0"><br>
+            <label for="contactChoice10">Нет</label><input type="radio" id="testChoise3" name="test3_10_3" value="1">
           </div>
           <div>
-            <label for="contactChoice1">4. В конце накрываем сковороду крышкой и ждем 5 минут. Даем мясу отдохнуть.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise4" name="test3_10_4" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise4" name="test3_10_4" value="1">
+            <label for="contactChoice10">4. В конце накрываем сковороду крышкой и ждем 5 минут. Даем мясу отдохнуть.</label><br>
+            <label for="contactChoice10">Да</label><input type="radio" id="testChoise4" name="test3_10_4" value="0"><br>
+            <label for="contactChoice10">Нет</label><input type="radio" id="testChoise4" name="test3_10_4" value="1">
           </div>
           <div>
-            <label for="contactChoice1">5. Лучшее масло для жарки – оливковое.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise5" name="test3_10_5" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise5" name="test3_10_5" value="1">
+            <label for="contactChoice10">5. Лучшее масло для жарки – оливковое.</label><br>
+            <label for="contactChoice10">Да</label><input type="radio" id="testChoise5" name="test3_10_5" value="0"><br>
+            <label for="contactChoice10">Нет</label><input type="radio" id="testChoise5" name="test3_10_5" value="1">
           </div>
           <div>
-            <label for="contactChoice1">6. Топленое масло – это сливочное масло, которое растопили на маленьком огне или водяной бане, потом процедили.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise6" name="test3_10_6" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise6_2" name="test3_10_6" value="1">
+            <label for="contactChoice10">6. Топленое масло – это сливочное масло, которое растопили на маленьком огне или водяной бане, потом процедили.</label><br>
+            <label for="contactChoice10">Да</label><input type="radio" id="testChoise6" name="test3_10_6" value="0"><br>
+            <label for="contactChoice10">Нет</label><input type="radio" id="testChoise6_2" name="test3_10_6" value="1">
           </div>
-          <button class="animated-button"type="button" onclick="task3_10()" style="width: 130px;">Result</button>
+          <button class="animated-button" id="buttonTask3_10" type="button" onclick="task3_10()" style="width: 130px;">Result</button>
         </form>
       </div>
 
@@ -786,33 +797,33 @@
         </div>
         <form id="test1_3" action="#" style="display: grid; grid-auto-columns: auto; font-weight:bold;">
           <div>
-            <label for="contactChoice1">1. В России нет мест, где можно поесть вкусно и недорого.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise1" name="test3_11_1" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise1" name="test3_11_1" value="1">
+            <label for="contactChoice11">1. В России нет мест, где можно поесть вкусно и недорого.</label><br>
+            <label for="contactChoice11">Да</label><input type="radio" id="testChoise1" name="test3_11_1" value="0"><br>
+            <label for="contactChoice11">Нет</label><input type="radio" id="testChoise1" name="test3_11_1" value="1">
           </div>
           <div>
-            <label for="contactChoice2">2. Столовые, кафе, рестораны, в которых готовят много разных блюд для завтрака, обеда и ужина, начинают работать очень рано.</label><br>
-            <label for="contactChoice2">Да</label><input type="radio" id="testChoise2" name="test3_11_2" value="0"><br>
-            <label for="contactChoice2">Нет</label><input type="radio" id="testChoise2" name="test3_11_2" value="1">
+            <label for="contactChoice11">2. Столовые, кафе, рестораны, в которых готовят много разных блюд для завтрака, обеда и ужина, начинают работать очень рано.</label><br>
+            <label for="contactChoice11">Да</label><input type="radio" id="testChoise2" name="test3_11_2" value="0"><br>
+            <label for="contactChoice11">Нет</label><input type="radio" id="testChoise2" name="test3_11_2" value="1">
           </div>
           <div>
             <label for="contactChoice1">3. Повара раз в неделю готовят много вкусного. Это мясная, сырная или овощная нарезки, несколько видов первого – супы, несколько рыбных и мясных вторых блюд, салатики, горячие и холодные закуски, разные сладости и, наконец, компоты, морсы, соки, чай и кофе.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise3" name="test3_11_3" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise3" name="test3_11_3" value="1">
+            <label for="contactChoice11">Да</label><input type="radio" id="testChoise3" name="test3_11_3" value="0"><br>
+            <label for="contactChoice11">Нет</label><input type="radio" id="testChoise3" name="test3_11_3" value="1">
           </div>
           <div>
-            <label for="contactChoice1">4. Столовые работают по принципу самообслуживания.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise4" name="test3_11_4" value="0"> <br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise4" name="test3_11_4" value="1">
+            <label for="contactChoice11">4. Столовые работают по принципу самообслуживания.</label><br>
+            <label for="contactChoice11">Да</label><input type="radio" id="testChoise4" name="test3_11_4" value="0"> <br>
+            <label for="contactChoice11">Нет</label><input type="radio" id="testChoise4" name="test3_11_4" value="1">
           </div>
           <div>
-            <label for="contactChoice1">5. Повара и их помощники покупают самые свежие и экологически чистые продукты, но вкус этих блюд не нравится никому.</label><br>
-            <label for="contactChoice1">Да</label><input type="radio" id="testChoise5" name="test3_11_5" value="0"><br>
-            <label for="contactChoice1">Нет</label><input type="radio" id="testChoise5" name="test3_11_5" value="1">
+            <label for="contactChoice11">5. Повара и их помощники покупают самые свежие и экологически чистые продукты, но вкус этих блюд не нравится никому.</label><br>
+            <label for="contactChoice11">Да</label><input type="radio" id="testChoise5" name="test3_11_5" value="0"><br>
+            <label for="contactChoice11">Нет</label><input type="radio" id="testChoise5" name="test3_11_5" value="1">
           </div>
-          <button class="animated-button"type="button" onclick="task3_11()" style="width: 130px;">Result</button>
+          <button class="animated-button"type="button" id="buttonTask3_11" onclick="task3_11()" style="width: 130px;">Result</button>
         </form>
-          <button  class="animated-button" onclick="resultLesson3()">Result Lesson</button>
+          <button  class="animated-button" onclick="resultLesson3();">Result Lesson</button>
       </div>
     </section>
   </main>

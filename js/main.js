@@ -179,6 +179,8 @@ function result_t_1_3() {
     
     console.log(result, bG, bR)     
     taskResult1_3 = result;       
+
+      // document.querySelector("#button_result_t_1_3").disabled = true;
 }
 
 const rightAnswerT1_7 = [
@@ -369,28 +371,55 @@ function task3_7() {
     let radioButtonChange3 = document.querySelectorAll("input[name='test3_7_3']");
     let radioButtonChange4 = document.querySelectorAll("input[name='test3_7_4']");
     
+
+        let labels = document.querySelectorAll("label[for='contactChoice7']");
+    console.log(labels);
+
     let result = 0;
 
     if(radioButtonChange1[1].checked)
     {
+       labels[2].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange1[0].checked){
+      labels[1].style.background = `red`;
     }
 
     if(radioButtonChange2[0].checked)
     {
+       labels[4].style.background = `green`;
       result += 1;
     }
 
+    if(radioButtonChange2[1].checked){
+      labels[5].style.background = `red`;
+    }
+
+    
     if(radioButtonChange3[0].checked)
     {
+       labels[7].style.background = `green`;
       result += 1;
     }
+    if(radioButtonChange3[1].checked){
+      labels[8].style.background = `red`;
+    }
 
-    if(radioButtonChange4[0].checked)
+
+
+
+      if(radioButtonChange4[0].checked)
     {
+      labels[10].style.background = `green`;
       result += 1;
     }
+    if(radioButtonChange4[1].checked){
+      labels[11].style.background = `red`;
+    }
 
+
+   document.querySelector("#buttonTask3_7").disabled = true;
     console.log(result)
     return result;
 }
@@ -408,63 +437,120 @@ function task3_8() {
     let radioButtonChange10 = document.querySelectorAll("input[name='test3_8_10']");
     let radioButtonChange11 = document.querySelectorAll("input[name='test3_8_11']");
     
+      let labels = document.querySelectorAll("label[for='contactChoice8']");
+    console.log(labels);
     let result = 0;
+
 
     if(radioButtonChange1[0].checked)
     {
+       labels[1].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange1[1].checked){
+      labels[2].style.background = `red`;
     }
 
     if(radioButtonChange2[1].checked)
     {
+       labels[5].style.background = `green`;
       result += 1;
     }
 
+    if(radioButtonChange2[0].checked){
+      labels[4].style.background = `red`;
+    }
+
+    
     if(radioButtonChange3[1].checked)
     {
+       labels[8].style.background = `green`;
       result += 1;
     }
+    if(radioButtonChange3[0].checked){
+      labels[7].style.background = `red`;
+    }
 
-    if(radioButtonChange4[0].checked)
+      if(radioButtonChange4[0].checked)
     {
+      labels[10].style.background = `green`;
       result += 1;
+    }
+    if(radioButtonChange4[1].checked){
+      labels[11].style.background = `red`;
     }
 
     if(radioButtonChange5[0].checked)
     {
+        labels[13].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange5[1].checked){
+      labels[14].style.background = `red`;
     }
 
     if(radioButtonChange6[1].checked)
     {
+      labels[17].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange6[0].checked){
+      labels[16].style.background = `red`;
+    }
 
-    if(radioButtonChange7[0].checked)
+
+   if(radioButtonChange7[0].checked)
     {
+      labels[19].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange7[1].checked){
+      labels[20].style.background = `red`;
+    }
 
-    if(radioButtonChange8[0].checked)
+
+       if(radioButtonChange8[0].checked)
     {
+      labels[22].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange8[1].checked){
+      labels[23].style.background = `red`;
+    }
 
-    if(radioButtonChange9[1].checked)
+       if(radioButtonChange9[1].checked)
     {
+      labels[26].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange9[0].checked){
+      labels[25].style.background = `red`;
+    }
 
-    if(radioButtonChange10[0].checked)
+
+
+       if(radioButtonChange10[0].checked)
     {
+      labels[28].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange10[1].checked){
+      labels[29].style.background = `red`;
+    }
 
-    if(radioButtonChange11[0].checked)
+
+
+       if(radioButtonChange11[0].checked)
     {
+      labels[31].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange11[1].checked){
+      labels[32].style.background = `red`;
+    }
 
+
+   document.querySelector("#buttonTask3_8").disabled = true;
     console.log(result)
     return result;
 }
@@ -478,37 +564,76 @@ function task3_10() {
     let radioButtonChange5 = document.querySelectorAll("input[name='test3_10_5']");
     let radioButtonChange6 = document.querySelectorAll("input[name='test3_10_6']");
     
+        let labels = document.querySelectorAll("label[for='contactChoice10']");
+    console.log(labels);
+
     let result = 0;
 
     if(radioButtonChange1[0].checked)
     {
+       labels[1].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange1[1].checked){
+      labels[2].style.background = `red`;
     }
 
     if(radioButtonChange2[1].checked)
     {
+       labels[5].style.background = `green`;
       result += 1;
     }
 
+    if(radioButtonChange2[0].checked){
+      labels[4].style.background = `red`;
+    }
+
+
+
+
+    
     if(radioButtonChange3[1].checked)
     {
+       labels[8].style.background = `green`;
       result += 1;
+    }if(radioButtonChange3[0].checked){
+      labels[7].style.background = `red`;
     }
 
-    if(radioButtonChange4[0].checked)
+      if(radioButtonChange4[0].checked)
     {
+      labels[10].style.background = `green`;
       result += 1;
     }
+    if(radioButtonChange4[1].checked){
+      labels[11].style.background = `red`;
+    }
 
+
+
+   
     if(radioButtonChange5[1].checked)
     {
+        labels[14].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange5[0].checked){
+      labels[13].style.background = `red`;
     }
 
     if(radioButtonChange6[0].checked)
     {
+      labels[16].style.background = `green`;
       result += 1;
     }
+     if(radioButtonChange6[1].checked){
+      labels[17].style.background = `red`;
+    }
+  
+
+ 
+
+    document.querySelector("#buttonTask3_10").disabled = true;
 
     console.log(result)
       return result;
@@ -521,38 +646,55 @@ function task3_11() {
     let radioButtonChange4 = document.querySelectorAll("input[name='test3_11_4']");
     let radioButtonChange5 = document.querySelectorAll("input[name='test3_11_5']");
     
+    let labels = document.querySelectorAll("label[for='contactChoice11']");
+    console.log(labels);
     let result = 0;
 
     if(radioButtonChange1[1].checked)
     {
-       
+       labels[2].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange1[0].checked){
+      labels[1].style.background = `red`;
     }
 
     if(radioButtonChange2[0].checked)
     {
-     
+     labels[4].style.background = `green`;
       result += 1;
+    }
+    if(radioButtonChange2[1].checked){
+      labels[5].style.background = `red`;
     }
 
     if(radioButtonChange3[1].checked)
     {
-        
+        labels[7].style.background = `green`;
       result += 1;
+    }
+     if(radioButtonChange3[0].checked){
+      labels[6].style.background = `red`;
     }
 
     if(radioButtonChange4[0].checked)
     {
-      
+      labels[9].style.background = `green`;
       result += 1;
+    }
+    if(radioButtonChange4[1].checked){
+      labels[10].style.background = `red`;
     }
 
     if(radioButtonChange5[1].checked)
     {
-        
+        labels[13].style.background = `green`;
       result += 1;
     }
-
+     if(radioButtonChange5[0].checked){
+      labels[12].style.background = `red`;
+    }
+    document.querySelector("#buttonTask3_11").disabled = true;
     console.log(result)
     return result;
 }
@@ -584,6 +726,7 @@ function task3_11() {
             
         }
     }
+    document.querySelector("#task2_2Button").disabled = true;
   }
 
   function  task1_4(){
@@ -609,6 +752,7 @@ function task3_11() {
             
         }
     }
+     document.querySelector("#task1_4Button").disabled = true;
 }
 
 
@@ -636,6 +780,7 @@ function task3_11() {
             
         }
     }
+      document.querySelector("#task3_4Button").disabled = true;
 }
 
 
@@ -663,6 +808,7 @@ function task3_11() {
             
         }
     }
+        document.querySelector("#task3_5Button").disabled = true;
   }
  function  task3_6(){
       console.log("asd")
@@ -688,6 +834,7 @@ function task3_11() {
             
         }
     }
+    document.querySelector("#task3_6Button").disabled = true;
   }
 
    function  task3_9(){
@@ -714,10 +861,38 @@ function task3_11() {
             
         }
     }
+    document.querySelector("#task3_9Button").disabled = true;
   }
 
 
+function  task3_3(){
 
+    var task = document.getElementById("task3_3").querySelectorAll('p .if_learning');
+      var right_task = document.getElementById("task3_3").querySelectorAll('p .if_correct');
+
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+
+
+    }
+  document.querySelector("#task3_3Button").disabled = true;
+}
 
 function  task1_5(){
 
@@ -744,7 +919,40 @@ function  task1_5(){
         }
     }
 
+      document.querySelector("#task1_5Button").disabled = true;
+
   }
+
+  function  task2_3(){
+
+    var task = document.getElementById("task2_3").querySelectorAll('p .if_learning');
+      var right_task = document.getElementById("task2_3").querySelectorAll('p .if_correct');
+
+      for (let i = 0; i < task.length; i++) {
+        if(task[i].value === right_task[i].innerHTML)
+        {
+          if( task[i].classList.contains("errorTask"))
+            task[i].classList.remove("errorTask");
+
+          if( !task[i].classList.contains("successfulTask"))
+            task[i].classList.add("successfulTask");
+        }
+        else{
+          if( !task[i].classList.contains("errorTask"))
+             task[i].classList.add("errorTask");
+
+
+          if( task[i].classList.contains("successfulTask"))
+              task[i].classList.remove("successfulTask");
+            
+        }
+    }
+
+      document.querySelector("#task2_3Button").disabled = true;
+
+
+  }
+
 
 
   function task2_5() {
@@ -930,6 +1138,7 @@ function result_t_2_5() {
             
         }
     }
+    document.querySelector("#task1_1").disabled = true;
   }
 
 
@@ -963,6 +1172,8 @@ function result_t_2_5() {
             
         }
     }
+
+      document.querySelector("#task2_1Button").disabled = true;
   }
 
 
@@ -1001,6 +1212,7 @@ function result_t_2_5() {
             
         }
     }
+    document.querySelector("#task3_1Button").disabled = true;
   }
 
 
@@ -1039,6 +1251,7 @@ function result_t_2_5() {
             
         }
     }
+    document.querySelector("#task3_2Button").disabled = true;
   }
 
 
@@ -1060,6 +1273,7 @@ function result_t_2_5() {
       localStorage.setItem('scoreLesson1', result)
       console.log(result);
       console.log('score',score);
+      document.location='lesson.html'
     }
 
 
@@ -1080,6 +1294,8 @@ function result_t_2_5() {
       localStorage.setItem('scoreLesson2', result)
       console.log(result);
       console.log('score',score);
+      document.location='lesson.html'
+
     }
 
 
@@ -1101,6 +1317,7 @@ function result_t_2_5() {
       localStorage.setItem('scoreLesson3', result)
       console.log(result);
       console.log('score',score);
+      document.location='lesson.html'
     }
 
 
