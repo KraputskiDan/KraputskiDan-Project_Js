@@ -392,6 +392,7 @@ function task3_7() {
     }
 
     console.log(result)
+    return result;
 }
 
 function task3_8() {
@@ -465,6 +466,7 @@ function task3_8() {
     }
 
     console.log(result)
+    return result;
 }
 
 
@@ -509,6 +511,7 @@ function task3_10() {
     }
 
     console.log(result)
+      return result;
 }
 
 function task3_11() {
@@ -522,31 +525,31 @@ function task3_11() {
 
     if(radioButtonChange1[1].checked)
     {
-      radioButtonChange1[1].style.backgroundColor = 'green' 
+       
       result += 1;
     }
 
     if(radioButtonChange2[0].checked)
     {
-          radioButtonChange2[0].style.backgroundColor = 'green' 
+     
       result += 1;
     }
 
     if(radioButtonChange3[1].checked)
     {
-        radioButtonChange3[1].style.backgroundColor = 'green' 
+        
       result += 1;
     }
 
     if(radioButtonChange4[0].checked)
     {
-        radioButtonChange4[0].style.backgroundColor = 'green' 
+      
       result += 1;
     }
 
     if(radioButtonChange5[1].checked)
     {
-        radioButtonChange5[1].style.backgroundColor = 'green' 
+        
       result += 1;
     }
 
@@ -587,7 +590,6 @@ function task3_11() {
       console.log("asd")
       let task = document.getElementById("task1_4").querySelectorAll('p .if_learning');
       let right_task = document.getElementById("task1_4").querySelectorAll('p .if_correct');
-console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
         if(task[i].value === right_task[i].innerHTML)
         {
@@ -607,14 +609,14 @@ console.log(task, right_task)
             
         }
     }
-  }
+}
 
 
    function  task3_4(){
       console.log("asd")
       let task = document.getElementById("task3_4").querySelectorAll('.if_learning');
       let right_task = document.getElementById("task3_4").querySelectorAll('.if_correct');
-console.log(task, right_task)
+      console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
         if(task[i].value === right_task[i].innerHTML)
         {
@@ -634,14 +636,14 @@ console.log(task, right_task)
             
         }
     }
-  }
+}
 
 
    function  task3_5(){
       console.log("asd")
       let task = document.getElementById("task3_5").querySelectorAll('.if_learning');
       let right_task = document.getElementById("task3_5").querySelectorAll('.if_correct');
-console.log(task, right_task)
+      console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
         if(task[i].value === right_task[i].innerHTML)
         {
@@ -662,12 +664,11 @@ console.log(task, right_task)
         }
     }
   }
-
-     function  task3_6(){
+ function  task3_6(){
       console.log("asd")
       let task = document.getElementById("task3_6").querySelectorAll('.if_learning');
       let right_task = document.getElementById("task3_6").querySelectorAll('.if_correct');
-console.log(task, right_task)
+      console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
         if(task[i].value === right_task[i].innerHTML)
         {
@@ -693,7 +694,7 @@ console.log(task, right_task)
       console.log("asd")
       let task = document.getElementById("task3_9").querySelectorAll('.if_learning');
       let right_task = document.getElementById("task3_9").querySelectorAll('.if_correct');
-console.log(task, right_task)
+      console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
         if(task[i].value === right_task[i].innerHTML)
         {
@@ -718,11 +719,9 @@ console.log(task, right_task)
 
 
 
-  
+function  task1_5(){
 
-  function  task1_5(){
-
- var task = document.getElementById("task1_5").querySelectorAll('p .if_learning');
+    var task = document.getElementById("task1_5").querySelectorAll('p .if_learning');
       var right_task = document.getElementById("task1_5").querySelectorAll('p .if_correct');
 
       for (let i = 0; i < task.length; i++) {
@@ -904,7 +903,7 @@ function result_t_2_5() {
       let task = document.getElementById("lesson1-1").querySelectorAll('.format ');
       let right_task = ['Бизнес','бизнес','Ресторан','Ресторан','Ресторанов',
       'заведений','арабский ресторан','арабского ресторана','арабского ресторана','деньги'];
-console.log(task, right_task)
+      console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
 
         console.log(task[i].innerHTML==right_task[i] );
@@ -1088,10 +1087,13 @@ console.log(task, right_task)
 
     function resultLesson3(){
       let score =0;
-      let scoreMax =35;
+      let scoreMax =26+7+14+6+16+33+8+10+12;
 
         score += document.querySelectorAll(".successfulTask").length;    
         score+= task3_11();
+        score+= task3_10();
+        score+= task3_8();
+        score+= task3_7();
 
  
         let result = score/scoreMax*100;
