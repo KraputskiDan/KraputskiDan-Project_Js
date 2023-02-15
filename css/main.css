@@ -1050,6 +1050,7 @@ body {
         "k k k";
     grid-template-columns: auto auto auto;
     padding: 25px;
+    margin-top: 35px;
 }
 
 #ls1_content_1 .text_content_gt_7 {
@@ -1069,6 +1070,7 @@ body {
         "k k k";
     grid-template-columns: 250px 250px 250px;
     padding: 25px;
+    margin-top: 25px;
 }
 
 #ls1_content_1 .text_content_gt_9 {
@@ -1160,8 +1162,8 @@ margin: .8em;
 }
 
 .if_correct{
-	/*display: none;*/
-	color: red;
+	display: none;
+	/*color: red;*/
 }
 
 input{
@@ -1266,7 +1268,7 @@ input{
         }
         #vocabulary_letter section {
             display: grid;
-            grid-template-columns: 125px 605px;
+            grid-template-columns: 125px  auto;
         }
         #vocabulary_letter section h1 {
             grid-column: 1;
