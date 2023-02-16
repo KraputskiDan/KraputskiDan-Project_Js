@@ -1273,7 +1273,7 @@ input{
 }
 
 #test1_7, #test2_5 {
-	height: 300px;
+	height: 150px;
 }
 
 #testInfo1_3 {
@@ -1338,3 +1338,7 @@ input{
         #vocabulary_letter section ul li {
             margin-bottom: 5px;
         }
+
+  #gt_5_el_1_1, #gt_5_el_1_2, #gt_5_el_1_3 {
+  	margin-top: 0px;
+  }

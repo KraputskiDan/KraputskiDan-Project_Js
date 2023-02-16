@@ -1109,7 +1109,7 @@ function result_t_2_5() {
   function  task1_1(){
       console.log("task1_1")
       let task = document.getElementById("lesson1-1").querySelectorAll('.format ');
-      let right_task = ['Бизнес','бизнес','Ресторан','Ресторан','Ресторанов',
+      let right_task = ['бизнес','бизнес','ресторан','Ресторан','ресторанов',
       'заведений','арабский ресторан','арабского ресторана','арабского ресторана','деньги'];
       console.log(task, right_task)
       for (let i = 0; i < task.length; i++) {
