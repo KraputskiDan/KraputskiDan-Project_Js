@@ -1212,14 +1212,14 @@ margin: .8em;
 	"f e e";
 } 
 
-/*.if_learning{
+.if_learning{
 
 }
 
 .if_correct{
 	display: none;
-	color: red;
-}*/
+	/*color: red;*/
+}
 
 input{
 	border:1px solid #808080;
